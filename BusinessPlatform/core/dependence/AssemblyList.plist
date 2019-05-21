@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>SessionServiceAssembly</string>
+	<string>DataBaseAssembly</string>
+	<string>NetworkAssembly</string>
+	<string>ReuseViewServiceAssembly</string>
+	<string>RootCakeAssembly</string>
+	<string>LoginCakeAssembly</string>
+	<string>AuthCakeAssembly</string>
+	<string>AppDesignAssembly</string>
+	<string>SecurityServiceAssembly</string>
+	<string>WelcomeCakeAssembly</string>
+	<string>AppDesignAssembly</string>
+	<string>LoaderServiceAssembly</string>
+	<string>ConfirmationCakeAssembly</string>
+	<string>MoreCakeAssembly</string>
+	<string>EventsCakeAssembly</string>
+	<string>EmployeeRequestsCakeAssembly</string>
+	<string>NewsCakeAssembly</string>
+	<string>LazyParametersManagerAssembly</string>
+	<string>NewsDetailsCakeAssembly</string>
+	<string>FileDirectorAssembly</string>
+	<string>ListGroupsNewsCakeAssembly</string>
+	<string>ServiceNewsAssembly</string>
+	<string>ServiceGroupsAssembly</string>
+</array>
+</plist>
