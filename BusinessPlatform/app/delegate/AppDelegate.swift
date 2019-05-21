@@ -31,13 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, IAppDelegate {
     }
     
     private func selectEntryPointApp(){
-
-        if self.authCake.authDirector.isAuth() {
-            self.authCake.authRouter.startAppWithAuthorized()
-        }
-        else {
-            self.authCake.authRouter.startAppNotAuthorized()
-        }
+         self.authCake.authRouter.startAppWithAuthorized()
     }
     
     private func configureExternalLibary(){

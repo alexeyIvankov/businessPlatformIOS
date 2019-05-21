@@ -13,7 +13,7 @@ extension UIStoryboard{
     
     public enum TypeSB: String{
         case auth = "AuthSB"
-        case root = "Main"
+        case root = "RootSB"
         case welcome = "WelcomeSB"
         case news = "NewsSB"
         case employeeRequests = "EmployeeRequestsSB"

@@ -17,7 +17,7 @@
 		FF104A1E229424B400C414F8 /* IRootDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10484A229424B300C414F8 /* IRootDirector.swift */; };
 		FF104A1F229424B400C414F8 /* RootDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10484B229424B300C414F8 /* RootDirector.swift */; };
 		FF104A20229424B400C414F8 /* RootCakeAssebly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10484D229424B300C414F8 /* RootCakeAssebly.swift */; };
-		FF104A21229424B400C414F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF10484E229424B300C414F8 /* Main.storyboard */; };
+		FF104A21229424B400C414F8 /* RootSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF10484E229424B300C414F8 /* RootSB.storyboard */; };
 		FF104A22229424B400C414F8 /* RootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104850229424B300C414F8 /* RootController.swift */; };
 		FF104A23229424B400C414F8 /* IRootCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104852229424B300C414F8 /* IRootCake.swift */; };
 		FF104A24229424B400C414F8 /* RootCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104853229424B300C414F8 /* RootCake.swift */; };
@@ -58,7 +58,6 @@
 		FF104A48229424B400C414F8 /* BusinessPlatform.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF10488D229424B300C414F8 /* BusinessPlatform.xcdatamodeld */; };
 		FF104A49229424B400C414F8 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10488F229424B300C414F8 /* DataBase.swift */; };
 		FF104A4A229424B400C414F8 /* IAppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104891229424B300C414F8 /* IAppDesign.swift */; };
-		FF104A4B229424B400C414F8 /* IDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104892229424B300C414F8 /* IDesign.swift */; };
 		FF104A4C229424B400C414F8 /* AppDesignAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104894229424B300C414F8 /* AppDesignAssembly.swift */; };
 		FF104A4D229424B400C414F8 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104895229424B300C414F8 /* AppDesign.swift */; };
 		FF104A4E229424B400C414F8 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104896229424B300C414F8 /* Global.swift */; };
@@ -171,7 +170,6 @@
 		FF104ABF229424B400C414F8 /* StateTypeWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104945229424B300C414F8 /* StateTypeWrapper.swift */; };
 		FF104AC0229424B400C414F8 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104946229424B300C414F8 /* State.swift */; };
 		FF104AC1229424B400C414F8 /* StateEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104947229424B300C414F8 /* StateEngine.swift */; };
-		FF104AC2229424B400C414F8 /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104949229424B300C414F8 /* IRouter.swift */; };
 		FF104AC3229424B400C414F8 /* IWindowStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10494D229424B300C414F8 /* IWindowStack.swift */; };
 		FF104AC4229424B400C414F8 /* WindowStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF10494E229424B300C414F8 /* WindowStack.swift */; };
 		FF104AC5229424B400C414F8 /* IAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104950229424B300C414F8 /* IAnimator.swift */; };
@@ -306,6 +304,20 @@
 		FF104BEB22942E4100C414F8 /* NVActivityIndicatorAnimationOrbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104BA422942E4000C414F8 /* NVActivityIndicatorAnimationOrbit.swift */; };
 		FF104BED22942E4100C414F8 /* RQShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FF104BA722942E4100C414F8 /* RQShineLabel.m */; };
 		FF104BF12294332E00C414F8 /* Bundle+LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104BF02294332E00C414F8 /* Bundle+LoadView.swift */; };
+		FF104BF6229448D300C414F8 /* IDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104BF3229448D300C414F8 /* IDesign.swift */; };
+		FF104BF9229448EE00C414F8 /* IRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104BF8229448EE00C414F8 /* IRouter.swift */; };
+		FF104BFB2294495E00C414F8 /* ICake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104BFA2294495E00C414F8 /* ICake.swift */; };
+		FF104C3322944C0700C414F8 /* IMainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C1522944C0700C414F8 /* IMainRouter.swift */; };
+		FF104C3422944C0700C414F8 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C1622944C0700C414F8 /* MainRouter.swift */; };
+		FF104C3522944C0700C414F8 /* IMainDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C1822944C0700C414F8 /* IMainDirector.swift */; };
+		FF104C3622944C0700C414F8 /* MainDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C1922944C0700C414F8 /* MainDirector.swift */; };
+		FF104C3722944C0700C414F8 /* MainCakeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C1B22944C0700C414F8 /* MainCakeAssembly.swift */; };
+		FF104C3822944C0700C414F8 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C1D22944C0700C414F8 /* MainController.swift */; };
+		FF104C3922944C0700C414F8 /* IMainDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C1F22944C0700C414F8 /* IMainDesign.swift */; };
+		FF104C3A22944C0700C414F8 /* MainDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C2022944C0700C414F8 /* MainDesign.swift */; };
+		FF104C3B22944C0700C414F8 /* IMainCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C2222944C0700C414F8 /* IMainCake.swift */; };
+		FF104C3C22944C0700C414F8 /* MainCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C2322944C0700C414F8 /* MainCake.swift */; };
+		FF104C3E22944D0200C414F8 /* MainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF104C3D22944D0200C414F8 /* MainSB.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -345,7 +357,7 @@
 		FF10484A229424B300C414F8 /* IRootDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRootDirector.swift; sourceTree = "<group>"; };
 		FF10484B229424B300C414F8 /* RootDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootDirector.swift; sourceTree = "<group>"; };
 		FF10484D229424B300C414F8 /* RootCakeAssebly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCakeAssebly.swift; sourceTree = "<group>"; };
-		FF10484E229424B300C414F8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FF10484E229424B300C414F8 /* RootSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RootSB.storyboard; sourceTree = "<group>"; };
 		FF104850229424B300C414F8 /* RootController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootController.swift; sourceTree = "<group>"; };
 		FF104852229424B300C414F8 /* IRootCake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRootCake.swift; sourceTree = "<group>"; };
 		FF104853229424B300C414F8 /* RootCake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCake.swift; sourceTree = "<group>"; };
@@ -387,7 +399,6 @@
 		FF10488E229424B300C414F8 /* BusinessPlatform.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessPlatform.xcdatamodel; sourceTree = "<group>"; };
 		FF10488F229424B300C414F8 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		FF104891229424B300C414F8 /* IAppDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAppDesign.swift; sourceTree = "<group>"; };
-		FF104892229424B300C414F8 /* IDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDesign.swift; sourceTree = "<group>"; };
 		FF104894229424B300C414F8 /* AppDesignAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDesignAssembly.swift; sourceTree = "<group>"; };
 		FF104895229424B300C414F8 /* AppDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
 		FF104896229424B300C414F8 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
@@ -511,7 +522,6 @@
 		FF104945229424B300C414F8 /* StateTypeWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateTypeWrapper.swift; sourceTree = "<group>"; };
 		FF104946229424B300C414F8 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		FF104947229424B300C414F8 /* StateEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateEngine.swift; sourceTree = "<group>"; };
-		FF104949229424B300C414F8 /* IRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
 		FF10494D229424B300C414F8 /* IWindowStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IWindowStack.swift; sourceTree = "<group>"; };
 		FF10494E229424B300C414F8 /* WindowStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowStack.swift; sourceTree = "<group>"; };
 		FF104950229424B300C414F8 /* IAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAnimator.swift; sourceTree = "<group>"; };
@@ -661,6 +671,20 @@
 		FF104BA822942E4100C414F8 /* RQShineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RQShineLabel.h; sourceTree = "<group>"; };
 		FF104BEE2294325C00C414F8 /* BusinessPlatform-bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BusinessPlatform-bridging-header.h"; sourceTree = "<group>"; };
 		FF104BF02294332E00C414F8 /* Bundle+LoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+LoadView.swift"; sourceTree = "<group>"; };
+		FF104BF3229448D300C414F8 /* IDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDesign.swift; sourceTree = "<group>"; };
+		FF104BF8229448EE00C414F8 /* IRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRouter.swift; sourceTree = "<group>"; };
+		FF104BFA2294495E00C414F8 /* ICake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICake.swift; sourceTree = "<group>"; };
+		FF104C1522944C0700C414F8 /* IMainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMainRouter.swift; sourceTree = "<group>"; };
+		FF104C1622944C0700C414F8 /* MainRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		FF104C1822944C0700C414F8 /* IMainDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMainDirector.swift; sourceTree = "<group>"; };
+		FF104C1922944C0700C414F8 /* MainDirector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDirector.swift; sourceTree = "<group>"; };
+		FF104C1B22944C0700C414F8 /* MainCakeAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCakeAssembly.swift; sourceTree = "<group>"; };
+		FF104C1D22944C0700C414F8 /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		FF104C1F22944C0700C414F8 /* IMainDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMainDesign.swift; sourceTree = "<group>"; };
+		FF104C2022944C0700C414F8 /* MainDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainDesign.swift; sourceTree = "<group>"; };
+		FF104C2222944C0700C414F8 /* IMainCake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMainCake.swift; sourceTree = "<group>"; };
+		FF104C2322944C0700C414F8 /* MainCake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCake.swift; sourceTree = "<group>"; };
+		FF104C3D22944D0200C414F8 /* MainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainSB.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,6 +761,7 @@
 		FF1048112294182600C414F8 /* BusinessPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				FF104BFC22944BDC00C414F8 /* main */,
 				FF104857229424B300C414F8 /* app */,
 				FF10497A229424B300C414F8 /* auth */,
 				FF104885229424B300C414F8 /* core */,
@@ -773,7 +798,7 @@
 				FF104846229424B300C414F8 /* design */,
 				FF104849229424B300C414F8 /* director */,
 				FF10484C229424B300C414F8 /* assemblys */,
-				FF10484E229424B300C414F8 /* Main.storyboard */,
+				FF10484E229424B300C414F8 /* RootSB.storyboard */,
 				FF10484F229424B300C414F8 /* controller */,
 				FF104851229424B300C414F8 /* cake */,
 				FF104854229424B300C414F8 /* router */,
@@ -982,6 +1007,7 @@
 		FF104885229424B300C414F8 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				FF104BF22294489800C414F8 /* architecture */,
 				FF104886229424B300C414F8 /* dataBase */,
 				FF104890229424B300C414F8 /* design */,
 				FF104896229424B300C414F8 /* Global.swift */,
@@ -997,7 +1023,6 @@
 				FF104934229424B300C414F8 /* lazyParametersManager */,
 				FF104939229424B300C414F8 /* loader */,
 				FF104941229424B300C414F8 /* templates */,
-				FF104948229424B300C414F8 /* routing */,
 				FF10494A229424B300C414F8 /* effects */,
 				FF10494B229424B300C414F8 /* windowStack */,
 				FF10494F229424B300C414F8 /* animations */,
@@ -1038,7 +1063,6 @@
 			isa = PBXGroup;
 			children = (
 				FF104891229424B300C414F8 /* IAppDesign.swift */,
-				FF104892229424B300C414F8 /* IDesign.swift */,
 				FF104893229424B300C414F8 /* assembly */,
 				FF104895229424B300C414F8 /* AppDesign.swift */,
 			);
@@ -1608,14 +1632,6 @@
 				FF104947229424B300C414F8 /* StateEngine.swift */,
 			);
 			path = stateEngine;
-			sourceTree = "<group>";
-		};
-		FF104948229424B300C414F8 /* routing */ = {
-			isa = PBXGroup;
-			children = (
-				FF104949229424B300C414F8 /* IRouter.swift */,
-			);
-			path = routing;
 			sourceTree = "<group>";
 		};
 		FF10494A229424B300C414F8 /* effects */ = {
@@ -2263,6 +2279,90 @@
 			path = RQShineLabel;
 			sourceTree = "<group>";
 		};
+		FF104BF22294489800C414F8 /* architecture */ = {
+			isa = PBXGroup;
+			children = (
+				FF104BF8229448EE00C414F8 /* IRouter.swift */,
+				FF104BF3229448D300C414F8 /* IDesign.swift */,
+				FF104BFA2294495E00C414F8 /* ICake.swift */,
+			);
+			path = architecture;
+			sourceTree = "<group>";
+		};
+		FF104BFC22944BDC00C414F8 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				FF104C3D22944D0200C414F8 /* MainSB.storyboard */,
+				FF104C1A22944C0700C414F8 /* assemblys */,
+				FF104C2122944C0700C414F8 /* cake */,
+				FF104C1C22944C0700C414F8 /* controller */,
+				FF104C1E22944C0700C414F8 /* design */,
+				FF104C1722944C0700C414F8 /* director */,
+				FF104C1422944C0700C414F8 /* router */,
+				FF104BFE22944C0700C414F8 /* views */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		FF104BFE22944C0700C414F8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FF104C1422944C0700C414F8 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				FF104C1522944C0700C414F8 /* IMainRouter.swift */,
+				FF104C1622944C0700C414F8 /* MainRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		FF104C1722944C0700C414F8 /* director */ = {
+			isa = PBXGroup;
+			children = (
+				FF104C1822944C0700C414F8 /* IMainDirector.swift */,
+				FF104C1922944C0700C414F8 /* MainDirector.swift */,
+			);
+			path = director;
+			sourceTree = "<group>";
+		};
+		FF104C1A22944C0700C414F8 /* assemblys */ = {
+			isa = PBXGroup;
+			children = (
+				FF104C1B22944C0700C414F8 /* MainCakeAssembly.swift */,
+			);
+			path = assemblys;
+			sourceTree = "<group>";
+		};
+		FF104C1C22944C0700C414F8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF104C1D22944C0700C414F8 /* MainController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		FF104C1E22944C0700C414F8 /* design */ = {
+			isa = PBXGroup;
+			children = (
+				FF104C1F22944C0700C414F8 /* IMainDesign.swift */,
+				FF104C2022944C0700C414F8 /* MainDesign.swift */,
+			);
+			path = design;
+			sourceTree = "<group>";
+		};
+		FF104C2122944C0700C414F8 /* cake */ = {
+			isa = PBXGroup;
+			children = (
+				FF104C2222944C0700C414F8 /* IMainCake.swift */,
+				FF104C2322944C0700C414F8 /* MainCake.swift */,
+			);
+			path = cake;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2389,9 +2489,10 @@
 				FF104AD1229424B400C414F8 /* WorkPhoneMoreCell.xib in Resources */,
 				FF104AD5229424B400C414F8 /* LocationMoreCell.xib in Resources */,
 				FF104A2C229424B400C414F8 /* Assets.xcassets in Resources */,
+				FF104C3E22944D0200C414F8 /* MainSB.storyboard in Resources */,
 				FF104AE2229424B400C414F8 /* AuthSB.storyboard in Resources */,
 				FF104AD3229424B400C414F8 /* PrivacyPhoneMoreCell.xib in Resources */,
-				FF104A21229424B400C414F8 /* Main.storyboard in Resources */,
+				FF104A21229424B400C414F8 /* RootSB.storyboard in Resources */,
 				FF104A90229424B400C414F8 /* AssemblyList.plist in Resources */,
 				FF104A61229424B400C414F8 /* ic_cross_white@2x.png in Resources */,
 			);
@@ -2561,6 +2662,7 @@
 				FF104ABF229424B400C414F8 /* StateTypeWrapper.swift in Sources */,
 				FF104A53229424B400C414F8 /* ILocalizator.swift in Sources */,
 				FF104A40229424B400C414F8 /* IWelcomeCake.swift in Sources */,
+				FF104C3322944C0700C414F8 /* IMainRouter.swift in Sources */,
 				FF104AE9229424B400C414F8 /* Account.swift in Sources */,
 				FF104AC1229424B400C414F8 /* StateEngine.swift in Sources */,
 				FF104AE4229424B400C414F8 /* AuthRealm.swift in Sources */,
@@ -2582,9 +2684,11 @@
 				FF104B06229424B400C414F8 /* ISessionService.swift in Sources */,
 				FF104ADC229424B400C414F8 /* IMoreCake.swift in Sources */,
 				FF104A52229424B400C414F8 /* ILocalize.swift in Sources */,
+				FF104C3922944C0700C414F8 /* IMainDesign.swift in Sources */,
 				FF104BAA22942E4100C414F8 /* DKChainableAnimationKit+Effects.swift in Sources */,
 				FF104BCE22942E4100C414F8 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				FF104BE722942E4100C414F8 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				FF104C3422944C0700C414F8 /* MainRouter.swift in Sources */,
 				FF104BCD22942E4100C414F8 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				FF104AAC229424B400C414F8 /* String+NSMutableAttributedString.swift in Sources */,
 				FF104ABE229424B400C414F8 /* ValidatorTemplate.swift in Sources */,
@@ -2610,6 +2714,7 @@
 				FF104A32229424B400C414F8 /* IWelcomeDesign.swift in Sources */,
 				FF104A8E229424B400C414F8 /* ITimer.swift in Sources */,
 				FF104AA1229424B400C414F8 /* UIColor+Hex.swift in Sources */,
+				FF104BFB2294495E00C414F8 /* ICake.swift in Sources */,
 				FF104BBE22942E4100C414F8 /* FSPagerView.swift in Sources */,
 				FF104A37229424B400C414F8 /* AnimatorImage.swift in Sources */,
 				FF104AA5229424B400C414F8 /* Image+Gradient.swift in Sources */,
@@ -2621,6 +2726,7 @@
 				FF104A57229424B400C414F8 /* UIImageView+Tools.swift in Sources */,
 				FF104A1C229424B400C414F8 /* RootDesign.swift in Sources */,
 				FF104A34229424B400C414F8 /* IWelcomeDirector.swift in Sources */,
+				FF104BF9229448EE00C414F8 /* IRouter.swift in Sources */,
 				FF104A31229424B400C414F8 /* IWelcomePagesDataSource.swift in Sources */,
 				FF104AFC229424B400C414F8 /* ILoginCake.swift in Sources */,
 				FF104B01229424B400C414F8 /* IAuthCake.swift in Sources */,
@@ -2666,8 +2772,8 @@
 				FF104A46229424B400C414F8 /* IDataBase.swift in Sources */,
 				FF104AF4229424B400C414F8 /* IAuthDataStorage.swift in Sources */,
 				FF104AAA229424B400C414F8 /* UIImage+Resize.m in Sources */,
+				FF104BF6229448D300C414F8 /* IDesign.swift in Sources */,
 				FF104AC9229424B400C414F8 /* IMoreDirector.swift in Sources */,
-				FF104AC2229424B400C414F8 /* IRouter.swift in Sources */,
 				FF104A1D229424B400C414F8 /* IRootDesign.swift in Sources */,
 				FF104BC822942E4100C414F8 /* NVActivityIndicatorViewable.swift in Sources */,
 				FF104ACC229424B400C414F8 /* MoreController.swift in Sources */,
@@ -2688,6 +2794,7 @@
 				FF104A5E229424B400C414F8 /* PageIndicator.swift in Sources */,
 				FF104BCC22942E4100C414F8 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				FF104BF12294332E00C414F8 /* Bundle+LoadView.swift in Sources */,
+				FF104C3522944C0700C414F8 /* IMainDirector.swift in Sources */,
 				FF104AEF229424B400C414F8 /* ConfirmationController.swift in Sources */,
 				FF104AA2229424B400C414F8 /* UIColor+RGB.swift in Sources */,
 				FF104BDF22942E4100C414F8 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
@@ -2699,18 +2806,20 @@
 				FF104A35229424B400C414F8 /* WelcomeDirector.swift in Sources */,
 				FF104A5B229424B400C414F8 /* PageIndicatorPosition.swift in Sources */,
 				FF104A2B229424B400C414F8 /* main.swift in Sources */,
+				FF104C3622944C0700C414F8 /* MainDirector.swift in Sources */,
 				FF104A96229424B400C414F8 /* ISettings.swift in Sources */,
 				FF104A26229424B400C414F8 /* IRootRouter.swift in Sources */,
 				FF104A7A229424B400C414F8 /* SpinerLayer.swift in Sources */,
 				FF104A9F229424B400C414F8 /* UIStoryboard+Load.swift in Sources */,
 				FF104A9A229424B400C414F8 /* TimeInterval+Date.swift in Sources */,
-				FF104A4B229424B400C414F8 /* IDesign.swift in Sources */,
 				FF104B04229424B400C414F8 /* ISession.swift in Sources */,
+				FF104C3B22944C0700C414F8 /* IMainCake.swift in Sources */,
 				FF104AD2229424B400C414F8 /* PrivacyPhoneMoreCell.swift in Sources */,
 				FF104A51229424B400C414F8 /* SecurityService.swift in Sources */,
 				FF104A33229424B400C414F8 /* WelcomeDesign.swift in Sources */,
 				FF104A88229424B400C414F8 /* PopMenuDismissAnimationController.swift in Sources */,
 				FF104BAB22942E4100C414F8 /* DKChainableAnimationKit+Transform.swift in Sources */,
+				FF104C3822944C0700C414F8 /* MainController.swift in Sources */,
 				FF104A68229424B400C414F8 /* Cell.swift in Sources */,
 				FF104BD922942E4100C414F8 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				FF104A4E229424B400C414F8 /* Global.swift in Sources */,
@@ -2732,6 +2841,7 @@
 				FF104AD0229424B400C414F8 /* WorkPhoneMoreCell.swift in Sources */,
 				FF104BD122942E4100C414F8 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				FF104AA8229424B400C414F8 /* UIImage+Alpha.m in Sources */,
+				FF104C3A22944C0700C414F8 /* MainDesign.swift in Sources */,
 				FF104A49229424B400C414F8 /* DataBase.swift in Sources */,
 				FF104A6F229424B400C414F8 /* Row.swift in Sources */,
 				FF104A97229424B400C414F8 /* Settings.swift in Sources */,
@@ -2748,6 +2858,7 @@
 				FF104A3D229424B400C414F8 /* IWelcomePagerCell.swift in Sources */,
 				FF104A4C229424B400C414F8 /* AppDesignAssembly.swift in Sources */,
 				FF104BE122942E4100C414F8 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
+				FF104C3C22944C0700C414F8 /* MainCake.swift in Sources */,
 				FF104AEA229424B400C414F8 /* IConfirmationDesign.swift in Sources */,
 				FF104BE922942E4100C414F8 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
 				FF104AF5229424B400C414F8 /* AuthDataStorage.swift in Sources */,
@@ -2779,6 +2890,7 @@
 				FF104AFF229424B400C414F8 /* LoginRouter.swift in Sources */,
 				FF104A38229424B400C414F8 /* WelcomeCakeAssembly.swift in Sources */,
 				FF104A5D229424B400C414F8 /* InputSource.swift in Sources */,
+				FF104C3722944C0700C414F8 /* MainCakeAssembly.swift in Sources */,
 				FF104AC7229424B400C414F8 /* IMoreDesign.swift in Sources */,
 				FF104BE822942E4100C414F8 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				FF104AE8229424B400C414F8 /* IAccount.swift in Sources */,

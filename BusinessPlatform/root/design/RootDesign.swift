@@ -32,22 +32,14 @@ class RootDesign : IRootDesign{
             if let navigationVC:UINavigationController = vc as? UINavigationController{
                 for (_,currentVC) in navigationVC.viewControllers.enumerated(){
                     
-//                    if currentVC is NewsController{
-//                        currentVC.tabBarItem.image =  UIImage(named: "news_icon_deselect")?.withRenderingMode(.alwaysOriginal)
-//                        currentVC.tabBarItem.selectedImage = UIImage(named: "news_icon_select")?.withRenderingMode(.alwaysOriginal)
-//                    }
-//                    else if currentVC is EventsController{
-//                        currentVC.tabBarItem.image =  UIImage(named: "events_icon_deselect")?.withRenderingMode(.alwaysOriginal)
-//                        currentVC.tabBarItem.selectedImage = UIImage(named: "events_icon_select")?.withRenderingMode(.alwaysOriginal)
-//                    }
-//                    else if currentVC is EmployeeRequestsController{
-//                        currentVC.tabBarItem.image =  UIImage(named: "info_icon_deselect")?.withRenderingMode(.alwaysOriginal)
-//                        currentVC.tabBarItem.selectedImage = UIImage(named: "info_icon_select")?.withRenderingMode(.alwaysOriginal)
-//                    }
-//                    else if currentVC is MoreController{
+                    if currentVC is MoreController{
+                        currentVC.title = "Еще"
 //                        currentVC.tabBarItem.image =  UIImage(named: "people_icon_deselect")?.withRenderingMode(.alwaysOriginal)
 //                        currentVC.tabBarItem.selectedImage = UIImage(named: "people_icon_select")?.withRenderingMode(.alwaysOriginal)
-//                    }
+                    }
+                    else if currentVC is MainController{
+                        currentVC.title = "Главный"
+                    }
                 }
             }
         }
