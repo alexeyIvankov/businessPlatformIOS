@@ -318,6 +318,18 @@
 		FF104C3B22944C0700C414F8 /* IMainCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C2222944C0700C414F8 /* IMainCake.swift */; };
 		FF104C3C22944C0700C414F8 /* MainCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C2322944C0700C414F8 /* MainCake.swift */; };
 		FF104C3E22944D0200C414F8 /* MainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF104C3D22944D0200C414F8 /* MainSB.storyboard */; };
+		FF42A832229456F6008D23AE /* MainTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A831229456F6008D23AE /* MainTableDataSource.swift */; };
+		FF42A83422945944008D23AE /* FilterCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A83322945944008D23AE /* FilterCategoryView.swift */; };
+		FF42A83622945965008D23AE /* FilterCategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF42A83522945965008D23AE /* FilterCategoryView.xib */; };
+		FF42A839229571EC008D23AE /* ICategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A838229571EB008D23AE /* ICategory.swift */; };
+		FF42A83B229571F7008D23AE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A83A229571F7008D23AE /* Category.swift */; };
+		FF42A83D229572E0008D23AE /* IFilterCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A83C229572E0008D23AE /* IFilterCategoryView.swift */; };
+		FF42A83F2295759E008D23AE /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A83E2295759E008D23AE /* CategoryCollectionCell.swift */; };
+		FF42A841229575E7008D23AE /* ICategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A840229575E7008D23AE /* ICategoryCollectionCell.swift */; };
+		FF42A8432295AE5D008D23AE /* CategoryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF42A8422295AE5D008D23AE /* CategoryCollectionCell.xib */; };
+		FF42A8462295BECD008D23AE /* IServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A8452295BECD008D23AE /* IServiceCategory.swift */; };
+		FF42A8482295BEDC008D23AE /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A8472295BEDC008D23AE /* ServiceCategory.swift */; };
+		FF42A84B2295CE0B008D23AE /* TableView+Deque.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A84A2295CE0B008D23AE /* TableView+Deque.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -685,6 +697,18 @@
 		FF104C2222944C0700C414F8 /* IMainCake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMainCake.swift; sourceTree = "<group>"; };
 		FF104C2322944C0700C414F8 /* MainCake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCake.swift; sourceTree = "<group>"; };
 		FF104C3D22944D0200C414F8 /* MainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainSB.storyboard; sourceTree = "<group>"; };
+		FF42A831229456F6008D23AE /* MainTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableDataSource.swift; sourceTree = "<group>"; };
+		FF42A83322945944008D23AE /* FilterCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCategoryView.swift; sourceTree = "<group>"; };
+		FF42A83522945965008D23AE /* FilterCategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCategoryView.xib; sourceTree = "<group>"; };
+		FF42A838229571EB008D23AE /* ICategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICategory.swift; sourceTree = "<group>"; };
+		FF42A83A229571F7008D23AE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FF42A83C229572E0008D23AE /* IFilterCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFilterCategoryView.swift; sourceTree = "<group>"; };
+		FF42A83E2295759E008D23AE /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
+		FF42A840229575E7008D23AE /* ICategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICategoryCollectionCell.swift; sourceTree = "<group>"; };
+		FF42A8422295AE5D008D23AE /* CategoryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionCell.xib; sourceTree = "<group>"; };
+		FF42A8452295BECD008D23AE /* IServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceCategory.swift; sourceTree = "<group>"; };
+		FF42A8472295BEDC008D23AE /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
+		FF42A84A2295CE0B008D23AE /* TableView+Deque.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableView+Deque.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1428,6 +1452,7 @@
 		FF104906229424B300C414F8 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FF42A8492295CDF6008D23AE /* tableView */,
 				FF104907229424B300C414F8 /* TimeInterval+Date.swift */,
 				FF104908229424B300C414F8 /* cells */,
 				FF10490B229424B300C414F8 /* navigationController */,
@@ -2292,6 +2317,9 @@
 		FF104BFC22944BDC00C414F8 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				FF42A8442295BE6B008D23AE /* services */,
+				FF42A83722957095008D23AE /* models */,
+				FF42A830229456E3008D23AE /* dataSource */,
 				FF104C3D22944D0200C414F8 /* MainSB.storyboard */,
 				FF104C1A22944C0700C414F8 /* assemblys */,
 				FF104C2122944C0700C414F8 /* cake */,
@@ -2307,6 +2335,12 @@
 		FF104BFE22944C0700C414F8 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FF42A83322945944008D23AE /* FilterCategoryView.swift */,
+				FF42A83522945965008D23AE /* FilterCategoryView.xib */,
+				FF42A83C229572E0008D23AE /* IFilterCategoryView.swift */,
+				FF42A83E2295759E008D23AE /* CategoryCollectionCell.swift */,
+				FF42A840229575E7008D23AE /* ICategoryCollectionCell.swift */,
+				FF42A8422295AE5D008D23AE /* CategoryCollectionCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -2361,6 +2395,40 @@
 				FF104C2322944C0700C414F8 /* MainCake.swift */,
 			);
 			path = cake;
+			sourceTree = "<group>";
+		};
+		FF42A830229456E3008D23AE /* dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A831229456F6008D23AE /* MainTableDataSource.swift */,
+			);
+			path = dataSource;
+			sourceTree = "<group>";
+		};
+		FF42A83722957095008D23AE /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A838229571EB008D23AE /* ICategory.swift */,
+				FF42A83A229571F7008D23AE /* Category.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		FF42A8442295BE6B008D23AE /* services */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A8452295BECD008D23AE /* IServiceCategory.swift */,
+				FF42A8472295BEDC008D23AE /* ServiceCategory.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		FF42A8492295CDF6008D23AE /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				FF42A84A2295CE0B008D23AE /* TableView+Deque.swift */,
+			);
+			path = tableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2478,6 +2546,7 @@
 				FF104A60229424B400C414F8 /* ic_cross_white@3x.png in Resources */,
 				FF104A2D229424B400C414F8 /* LaunchScreen.storyboard in Resources */,
 				FF104AB9229424B400C414F8 /* FullSreenLoader.xib in Resources */,
+				FF42A83622945965008D23AE /* FilterCategoryView.xib in Resources */,
 				FF104A70229424B400C414F8 /* PMHLoader.xib in Resources */,
 				FF104ADA229424B400C414F8 /* EmailMoreCell.xib in Resources */,
 				FF104AD6229424B400C414F8 /* SubdivisionMoreCell.xib in Resources */,
@@ -2485,6 +2554,7 @@
 				FF104ACD229424B400C414F8 /* MoreSB.storyboard in Resources */,
 				FF104A3E229424B400C414F8 /* WelcomePagerCell.xib in Resources */,
 				FF104ACE229424B400C414F8 /* SettingsMoreCell.xib in Resources */,
+				FF42A8432295AE5D008D23AE /* CategoryCollectionCell.xib in Resources */,
 				FF104AD9229424B400C414F8 /* AccountMoreCell.xib in Resources */,
 				FF104AD1229424B400C414F8 /* WorkPhoneMoreCell.xib in Resources */,
 				FF104AD5229424B400C414F8 /* LocationMoreCell.xib in Resources */,
@@ -2679,6 +2749,7 @@
 				FF104ADB229424B400C414F8 /* EmailMoreCell.swift in Sources */,
 				FF104BB722942E4100C414F8 /* UIView+ChainableAnimator.swift in Sources */,
 				FF104A23229424B400C414F8 /* IRootCake.swift in Sources */,
+				FF42A83D229572E0008D23AE /* IFilterCategoryView.swift in Sources */,
 				FF104A24229424B400C414F8 /* RootCake.swift in Sources */,
 				FF104A84229424B400C414F8 /* PopMenuGradientView.swift in Sources */,
 				FF104B06229424B400C414F8 /* ISessionService.swift in Sources */,
@@ -2779,11 +2850,13 @@
 				FF104ACC229424B400C414F8 /* MoreController.swift in Sources */,
 				FF104BD622942E4100C414F8 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				FF104AE0229424B400C414F8 /* IAuthDirector.swift in Sources */,
+				FF42A839229571EC008D23AE /* ICategory.swift in Sources */,
 				FF104AAB229424B400C414F8 /* UIView+Shadow.swift in Sources */,
 				FF104AAD229424B400C414F8 /* String+Remove.swift in Sources */,
 				FF104AC6229424B400C414F8 /* IViewWithDisplayAnimation.swift in Sources */,
 				FF104BD722942E4100C414F8 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				FF104AB8229424B400C414F8 /* ILazyParametersManager.swift in Sources */,
+				FF42A84B2295CE0B008D23AE /* TableView+Deque.swift in Sources */,
 				FF104ABD229424B400C414F8 /* LoaderServiceAssembly.swift in Sources */,
 				FF104BD522942E4100C414F8 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				FF104A5C229424B400C414F8 /* FullScreenSlideshowViewController.swift in Sources */,
@@ -2797,6 +2870,7 @@
 				FF104C3522944C0700C414F8 /* IMainDirector.swift in Sources */,
 				FF104AEF229424B400C414F8 /* ConfirmationController.swift in Sources */,
 				FF104AA2229424B400C414F8 /* UIColor+RGB.swift in Sources */,
+				FF42A83422945944008D23AE /* FilterCategoryView.swift in Sources */,
 				FF104BDF22942E4100C414F8 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				FF104A43229424B400C414F8 /* WelcomeRouter.swift in Sources */,
 				FF104A4D229424B400C414F8 /* AppDesign.swift in Sources */,
@@ -2844,7 +2918,9 @@
 				FF104C3A22944C0700C414F8 /* MainDesign.swift in Sources */,
 				FF104A49229424B400C414F8 /* DataBase.swift in Sources */,
 				FF104A6F229424B400C414F8 /* Row.swift in Sources */,
+				FF42A841229575E7008D23AE /* ICategoryCollectionCell.swift in Sources */,
 				FF104A97229424B400C414F8 /* Settings.swift in Sources */,
+				FF42A83B229571F7008D23AE /* Category.swift in Sources */,
 				FF104BE322942E4100C414F8 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				FF104BD222942E4100C414F8 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				FF104A76229424B400C414F8 /* CATransition+Closure.swift in Sources */,
@@ -2886,6 +2962,7 @@
 				FF104A99229424B400C414F8 /* IError.swift in Sources */,
 				FF104B00229424B400C414F8 /* AuthCake.swift in Sources */,
 				FF104AE7229424B400C414F8 /* AccountRealm.swift in Sources */,
+				FF42A832229456F6008D23AE /* MainTableDataSource.swift in Sources */,
 				FF104AE6229424B400C414F8 /* IAuth.swift in Sources */,
 				FF104AFF229424B400C414F8 /* LoginRouter.swift in Sources */,
 				FF104A38229424B400C414F8 /* WelcomeCakeAssembly.swift in Sources */,
@@ -2894,6 +2971,7 @@
 				FF104AC7229424B400C414F8 /* IMoreDesign.swift in Sources */,
 				FF104BE822942E4100C414F8 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 				FF104AE8229424B400C414F8 /* IAccount.swift in Sources */,
+				FF42A83F2295759E008D23AE /* CategoryCollectionCell.swift in Sources */,
 				FF104AFE229424B400C414F8 /* ILoginRouter.swift in Sources */,
 				FF104BAF22942E4100C414F8 /* DKChainableAnimationKit+Frame.swift in Sources */,
 				FF104A9E229424B400C414F8 /* DispatchQueue+After.swift in Sources */,
@@ -2922,6 +3000,7 @@
 				FF104AF6229424B400C414F8 /* LoginDesign.swift in Sources */,
 				FF104BBB22942E4100C414F8 /* JHChainableAnimator.m in Sources */,
 				FF104A7B229424B400C414F8 /* CGRectEx.swift in Sources */,
+				FF42A8482295BEDC008D23AE /* ServiceCategory.swift in Sources */,
 				FF104BC322942E4100C414F8 /* FSPageControl.swift in Sources */,
 				FF104A22229424B400C414F8 /* RootController.swift in Sources */,
 				FF104A45229424B400C414F8 /* DataBaseAssembly.swift in Sources */,
@@ -2937,6 +3016,7 @@
 				FF104AD8229424B400C414F8 /* AccountMoreCell.swift in Sources */,
 				FF104BB222942E4100C414F8 /* DKChainableAnimationKit.swift in Sources */,
 				FF104A9B229424B400C414F8 /* UICollectionViewCell+Reuse.swift in Sources */,
+				FF42A8462295BECD008D23AE /* IServiceCategory.swift in Sources */,
 				FF104AED229424B400C414F8 /* IConfirmationDirector.swift in Sources */,
 				FF104AE3229424B400C414F8 /* AuthCakeAssembly.swift in Sources */,
 				FF104A4A229424B400C414F8 /* IAppDesign.swift in Sources */,

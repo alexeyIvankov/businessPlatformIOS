@@ -11,8 +11,8 @@ import UIKit
 import WebKit
 import KeyboardHandler
 
-class MainController : UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class MainController : UIViewController{
+   
     //MARK: Outlets
     @IBOutlet var tableView:UITableView!
     
@@ -20,7 +20,7 @@ class MainController : UIViewController, UITableViewDelegate, UITableViewDataSou
     var cake:IMainCake = Depednence.tryInject()!
     
     //MARK:
-    private lazy var cells:[UITableViewCell] = createDataSource()
+   
     
 
     //MARK: Life cycle
@@ -29,8 +29,8 @@ class MainController : UIViewController, UITableViewDelegate, UITableViewDataSou
         self.navigationItem.title = "Главный"
         self.cake.router.setOwnwer(ownwer: self)
         self.cake.design.apply(vc: self)
-//        self.configureTableViewAndComponents()
-//        self.tableView.reloadData()
+        self.configureTableViewAndComponents()
+        self.tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,10 +44,12 @@ class MainController : UIViewController, UITableViewDelegate, UITableViewDataSou
     
     //MARK: - config ui components
     private func configureTableViewAndComponents(){
-        self.tableView.estimatedRowHeight = UIScreen.main.bounds.size.height
-        self.tableView.rowHeight = UITableView.automaticDimension
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        self.tableView.tableHeaderView = FilterCategoryView.build()
+        
+//        self.tableView.estimatedRowHeight = UIScreen.main.bounds.size.height
+//        self.tableView.rowHeight = UITableView.automaticDimension
+//        self.tableView.delegate = self
+//        self.tableView.dataSource = self
     }
     
     //MARK: - data source
@@ -61,22 +63,6 @@ class MainController : UIViewController, UITableViewDelegate, UITableViewDataSou
          let workPhoneCell = Bundle.main.loadNibNamed("WorkPhoneMoreCell", owner: nil, options: nil)?.first as! WorkPhoneMoreCell
         
         return [accountCell,subdivisionCell, workPhoneCell,privacyPhoneCell,  emailCell, locationCell, ]
-    }
-    
-    //MARK: UITableViewDataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cells.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell:UITableViewCell = self.cells[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
