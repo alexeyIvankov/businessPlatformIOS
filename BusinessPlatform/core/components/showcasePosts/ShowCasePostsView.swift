@@ -1,28 +1,28 @@
 //
-//  CategoriesCell.swift
+//  ShowCasePostsView.swift
 //  BusinessPlatform
 //
-//  Created by Alexey Ivankov on 21/05/2019.
+//  Created by Alexey Ivankov on 24/05/2019.
 //  Copyright © 2019 personal. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class FilterCategoryView : UITableViewCell, IFilterCategoryView, UICollectionViewDelegate{
-
+class ShowCasePostsView : UITableViewCell, IShowCasePostsView, UICollectionViewDelegate{
+    
     @IBOutlet var collectionView:AICollectionView!
     
-    var delegate: IFilterCategoryDelegate?
+    var delegate: IShowCasePostsViewDelegate?
     
-    private var _dataSource: IFilterCategoryDataSource!
+    private var _dataSource: IShowCasePostsDataSource!
     private var _sizeCell:CGSize = CGSize(width: 100, height: 100)
     private var _minimumLineSpacing:CGFloat = 25
     
-    static func build()-> FilterCategoryView{
-       
-        let v:FilterCategoryView = Bundle.loadView(fromNib: "FilterCategoryView",
-                                                   withType: FilterCategoryView.self)
+    static func build()-> ShowCasePostsView{
+        
+        let v:ShowCasePostsView = Bundle.loadView(fromNib: "ShowCasePostsView",
+                                                   withType: ShowCasePostsView.self)
         return v
     }
     
@@ -31,7 +31,7 @@ class FilterCategoryView : UITableViewCell, IFilterCategoryView, UICollectionVie
         configureLayoutIfFlowLayout()
     }
     
-    func set(dataSource:IFilterCategoryDataSource){
+    func set(dataSource:IShowCasePostsDataSource){
         _dataSource = dataSource
         self.collectionView.dataSource = _dataSource
     }
@@ -62,24 +62,24 @@ class FilterCategoryView : UITableViewCell, IFilterCategoryView, UICollectionVie
     
     //MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-        let category = _dataSource.getCategory(indexPath: indexPath)
-        assert(category != nil)
-        self.delegate?.didSelect(category: category!)
+        let post = _dataSource.getPost(indexPath: indexPath)
+        assert(post != nil)
+        self.delegate?.didSelect(post: post!)
     }
 }
 
-protocol ICategoryCollectionCell {
-    func set(category:ICategory)
+protocol IPostCollectionCell {
+    func set(post:IPost)
 }
 
-class CategoryCollectionCell : UICollectionViewCell, ICategoryCollectionCell {
+class PostCollectionCell : UICollectionViewCell, IPostCollectionCell {
     
-    @IBOutlet var labelCategoryName:UILabel!
+    @IBOutlet var labelPostName:UILabel!
     
-    private var category:ICategory!
+    private var post:IPost!
     
-    func set(category: ICategory) {
-        self.category = category
-        self.labelCategoryName.text = self.category.name
+    func set(post: IPost) {
+        self.post = post
+        self.labelPostName.text = self.post.name
     }
 }

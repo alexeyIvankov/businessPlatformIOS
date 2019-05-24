@@ -329,6 +329,13 @@
 		FFC4ECF92298377000396A0A /* FilterCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ECF52298377000396A0A /* FilterCategoryView.swift */; };
 		FFC4ECFA2298377000396A0A /* IFilterCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ECF62298377000396A0A /* IFilterCategoryView.swift */; };
 		FFC4ECFC22983B3800396A0A /* IFilterCategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ECFB22983B3800396A0A /* IFilterCategoryDataSource.swift */; };
+		FFC4ED0622984FDF00396A0A /* IShowCasePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED0522984FDF00396A0A /* IShowCasePostsView.swift */; };
+		FFC4ED082298501200396A0A /* ShowCasePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED072298501200396A0A /* ShowCasePostsView.swift */; };
+		FFC4ED0A2298518E00396A0A /* IShowCasePostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED092298518E00396A0A /* IShowCasePostsDataSource.swift */; };
+		FFC4ED0D2298543200396A0A /* IPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED0C2298543200396A0A /* IPost.swift */; };
+		FFC4ED0F2298543C00396A0A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED0E2298543C00396A0A /* Post.swift */; };
+		FFC4ED112298580100396A0A /* ShowCasePostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC4ED102298580100396A0A /* ShowCasePostView.xib */; };
+		FFC4ED132298587F00396A0A /* PostCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC4ED122298587F00396A0A /* PostCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -695,6 +702,13 @@
 		FFC4ECF52298377000396A0A /* FilterCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCategoryView.swift; sourceTree = "<group>"; };
 		FFC4ECF62298377000396A0A /* IFilterCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFilterCategoryView.swift; sourceTree = "<group>"; };
 		FFC4ECFB22983B3800396A0A /* IFilterCategoryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFilterCategoryDataSource.swift; sourceTree = "<group>"; };
+		FFC4ED0522984FDF00396A0A /* IShowCasePostsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IShowCasePostsView.swift; sourceTree = "<group>"; };
+		FFC4ED072298501200396A0A /* ShowCasePostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCasePostsView.swift; sourceTree = "<group>"; };
+		FFC4ED092298518E00396A0A /* IShowCasePostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IShowCasePostsDataSource.swift; sourceTree = "<group>"; };
+		FFC4ED0C2298543200396A0A /* IPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPost.swift; sourceTree = "<group>"; };
+		FFC4ED0E2298543C00396A0A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FFC4ED102298580100396A0A /* ShowCasePostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowCasePostView.xib; sourceTree = "<group>"; };
+		FFC4ED122298587F00396A0A /* PostCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2169,6 +2183,7 @@
 		FFC4EC60229835EF00396A0A /* components */ = {
 			isa = PBXGroup;
 			children = (
+				FFC4ED0222984FDF00396A0A /* showcasePosts */,
 				FFC4ECF0229836E000396A0A /* categoryFilter */,
 				FFC4ECE72298368200396A0A /* image */,
 				FFC4ECEA2298368200396A0A /* views */,
@@ -2452,6 +2467,44 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		FFC4ED0222984FDF00396A0A /* showcasePosts */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED0B2298542900396A0A /* models */,
+				FFC4ED0322984FDF00396A0A /* dataSource */,
+				FFC4ED0422984FDF00396A0A /* cells */,
+				FFC4ED0522984FDF00396A0A /* IShowCasePostsView.swift */,
+				FFC4ED072298501200396A0A /* ShowCasePostsView.swift */,
+				FFC4ED102298580100396A0A /* ShowCasePostView.xib */,
+			);
+			path = showcasePosts;
+			sourceTree = "<group>";
+		};
+		FFC4ED0322984FDF00396A0A /* dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED092298518E00396A0A /* IShowCasePostsDataSource.swift */,
+			);
+			path = dataSource;
+			sourceTree = "<group>";
+		};
+		FFC4ED0422984FDF00396A0A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED122298587F00396A0A /* PostCollectionCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		FFC4ED0B2298542900396A0A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED0C2298543200396A0A /* IPost.swift */,
+				FFC4ED0E2298543C00396A0A /* Post.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2576,7 +2629,9 @@
 				FF104A3E229424B400C414F8 /* WelcomePagerCell.xib in Resources */,
 				FF104ACE229424B400C414F8 /* SettingsMoreCell.xib in Resources */,
 				FF104AD9229424B400C414F8 /* AccountMoreCell.xib in Resources */,
+				FFC4ED112298580100396A0A /* ShowCasePostView.xib in Resources */,
 				FF104AD1229424B400C414F8 /* WorkPhoneMoreCell.xib in Resources */,
+				FFC4ED132298587F00396A0A /* PostCollectionCell.xib in Resources */,
 				FF104AD5229424B400C414F8 /* LocationMoreCell.xib in Resources */,
 				FF104A2C229424B400C414F8 /* Assets.xcassets in Resources */,
 				FFC4ECCC229835EF00396A0A /* PMHLoader.xib in Resources */,
@@ -2798,6 +2853,8 @@
 				FFC4ECE3229835EF00396A0A /* PopMenuPresentAnimationController.swift in Sources */,
 				FF104A91229424B400C414F8 /* IDependenceDirector.swift in Sources */,
 				FF42A86122980EEE008D23AE /* MainFilterCategoriesDataSource.swift in Sources */,
+				FFC4ED0A2298518E00396A0A /* IShowCasePostsDataSource.swift in Sources */,
+				FFC4ED0622984FDF00396A0A /* IShowCasePostsView.swift in Sources */,
 				FF104BD322942E4100C414F8 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
 				FFC4ECDA229835EF00396A0A /* TimerEx.swift in Sources */,
 				FFC4ECC0229835EF00396A0A /* AICollectionView.swift in Sources */,
@@ -2908,6 +2965,7 @@
 				FFC4ECCA229835EF00396A0A /* TableContainer.swift in Sources */,
 				FF104B04229424B400C414F8 /* ISession.swift in Sources */,
 				FF104C3B22944C0700C414F8 /* IMainCake.swift in Sources */,
+				FFC4ED0D2298543200396A0A /* IPost.swift in Sources */,
 				FFC4ECDB229835EF00396A0A /* PopMenuAction.swift in Sources */,
 				FF104AD2229424B400C414F8 /* PrivacyPhoneMoreCell.swift in Sources */,
 				FF104A51229424B400C414F8 /* SecurityService.swift in Sources */,
@@ -2917,6 +2975,7 @@
 				FF104BD922942E4100C414F8 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				FF104A4E229424B400C414F8 /* Global.swift in Sources */,
 				FFC4ECEE2298368300396A0A /* UIViewDrawBorder.swift in Sources */,
+				FFC4ED0F2298543C00396A0A /* Post.swift in Sources */,
 				FF104AB2229424B400C414F8 /* UIViewController+Keyboard.swift in Sources */,
 				FF104AFB229424B400C414F8 /* LoginController.swift in Sources */,
 				FFC4ECD4229835EF00396A0A /* Gap.swift in Sources */,
@@ -2973,6 +3032,7 @@
 				FF104A39229424B400C414F8 /* IWelcomePage.swift in Sources */,
 				FF104BAD22942E4100C414F8 /* DKChainableAnimationKit+Anchor.swift in Sources */,
 				FF104BB922942E4100C414F8 /* JHKeyframeAnimation.m in Sources */,
+				FFC4ED082298501200396A0A /* ShowCasePostsView.swift in Sources */,
 				FF104A93229424B400C414F8 /* DynamicAssembly.swift in Sources */,
 				FF104BB322942E4100C414F8 /* UIView+AnimationKit.swift in Sources */,
 				FF104AC5229424B400C414F8 /* IAnimator.swift in Sources */,
