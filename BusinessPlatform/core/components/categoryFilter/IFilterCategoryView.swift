@@ -10,6 +10,12 @@ import Foundation
 import UIKit
 
 public protocol IFilterCategoryView{
-    func set(categories:[ICategory])
+    
+    //UI settings
+    func set(sizeCell:CGSize) //default 100x100
+    func set(minSpacing:CGFloat) //default 25
+    
+    //Data source
+    func set(dataSource:IFilterCategoryDataSource)
     func reloadData()
 }

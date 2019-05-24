@@ -9,5 +9,5 @@
 import Foundation
 
 protocol IMainDirector : AnyObject {
-    
+    var serviceCategory:IServiceCategory { get }
 }

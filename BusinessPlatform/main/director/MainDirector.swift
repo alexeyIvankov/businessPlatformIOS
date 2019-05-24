@@ -9,6 +9,9 @@
 import Foundation
 
 class MainDirector : IMainDirector {
+    var serviceCategory: IServiceCategory
     
-  
+    required init(serviceCategory: IServiceCategory){
+        self.serviceCategory = serviceCategory
+    }
 }
