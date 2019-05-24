@@ -9,4 +9,6 @@
 import Foundation
 
 public protocol IFilterCategoryDataSource : UICollectionViewDataSource {
+    
+    func getCategory(indexPath:IndexPath) -> ICategory?
 }

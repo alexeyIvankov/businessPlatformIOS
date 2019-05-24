@@ -9,12 +9,20 @@
 import Foundation
 
 class MainFilterCategoriesDataSource : NSObject, IFilterCategoryDataSource{
-    
+ 
     private var categories: [ICategory] = []
     
     required init(categories: [ICategory]) {
         super.init()
         self.categories = categories
+    }
+    
+    func getCategory(indexPath: IndexPath) -> ICategory? {
+        
+        guard indexPath.row < self.categories.count else {
+            return nil
+        }
+        return self.categories[indexPath.row]
     }
     
     

@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-class FilterCategoryView : UITableViewCell, IFilterCategoryView{
+class FilterCategoryView : UITableViewCell, IFilterCategoryView, UICollectionViewDelegate{
 
-    
     @IBOutlet var collectionView:AICollectionView!
+    
+    var delegate: IFilterCategoryDelegate?
     
     private var _dataSource: IFilterCategoryDataSource!
     private var _sizeCell:CGSize = CGSize(width: 100, height: 100)
@@ -27,6 +28,7 @@ class FilterCategoryView : UITableViewCell, IFilterCategoryView{
     
     override func awakeFromNib() {
         self.collectionView.dataSource = _dataSource
+        self.collectionView.delegate = self
         configureLayoutIfFlowLayout()
     }
     
@@ -57,6 +59,13 @@ class FilterCategoryView : UITableViewCell, IFilterCategoryView{
             collectionViewFlowLayout.invalidateLayout()
             self.collectionView.layoutSubviews()
         }
+    }
+    
+    //MARK: - UICollectionViewDelegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        let category = _dataSource.getCategory(indexPath: indexPath)
+        assert(category != nil)
+        self.delegate?.didSelect(category: category!)
     }
 }
 

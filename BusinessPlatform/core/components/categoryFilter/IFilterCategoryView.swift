@@ -11,6 +11,8 @@ import UIKit
 
 public protocol IFilterCategoryView{
     
+    var delegate:IFilterCategoryDelegate? { get }
+    
     //UI settings
     func set(sizeCell:CGSize) //default 100x100
     func set(minSpacing:CGFloat) //default 25
@@ -18,4 +20,8 @@ public protocol IFilterCategoryView{
     //Data source
     func set(dataSource:IFilterCategoryDataSource)
     func reloadData()
+}
+
+public protocol IFilterCategoryDelegate{
+    func didSelect(category:ICategory)
 }

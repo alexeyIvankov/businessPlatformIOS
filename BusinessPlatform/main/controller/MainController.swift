@@ -11,12 +11,16 @@ import UIKit
 import WebKit
 import KeyboardHandler
 
-class MainController : UIViewController{
-   
+class MainController : UIViewController, IFilterCategoryDelegate{
+  
     //MARK: Outlets
     @IBOutlet var tableView:UITableView!
     
-    lazy var filterCategoryView = FilterCategoryView.build()
+    lazy var filterCategoryView = { () -> FilterCategoryView in
+        let v = FilterCategoryView.build()
+        v.delegate = self
+        return v
+    }()
     
     //MARK: Dependence
     var cake:IMainCake = Depednence.tryInject()!
@@ -46,9 +50,6 @@ class MainController : UIViewController{
         self.tableView.tableHeaderView = self.filterCategoryView
         self.tableView.estimatedRowHeight = UIScreen.main.bounds.size.height
         self.tableView.rowHeight = UITableView.automaticDimension
-        
-//        self.tableView.delegate = self
-//        self.tableView.dataSource = self
     }
     
     //MARK: - data source
@@ -59,6 +60,11 @@ class MainController : UIViewController{
             self.filterCategoryView.set(sizeCell: CGSize(width: 100, height: 100))
             self.filterCategoryView.reloadData()
         }
+    }
+    
+    //MARK:- IFilterCategoryDelegate
+    func didSelect(category: ICategory) {
+        print(category.name)
     }
 }
 
