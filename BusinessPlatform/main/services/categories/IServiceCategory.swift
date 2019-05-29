@@ -11,5 +11,5 @@ import UIKit
 
 protocol IServiceCategory {
     
-    func loadAllCategories(completion:@escaping(IFilterCategoryDataSource)->())
+    func loadMainCategories(completion:@escaping(IFilterCategoryDataSource)->())
 }

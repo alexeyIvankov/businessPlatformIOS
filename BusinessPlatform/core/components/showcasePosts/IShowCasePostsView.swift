@@ -13,8 +13,7 @@ protocol IShowCasePostsView {
     var delegate:IShowCasePostsViewDelegate? { get }
     
     //UI settings
-    func set(sizeCell:CGSize) //default 100x100
-    func set(minSpacing:CGFloat) //default 25
+    func set(design:IDesignShowCasePosts)
     
     //Data source
     func set(dataSource:IShowCasePostsDataSource)

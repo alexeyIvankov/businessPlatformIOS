@@ -272,9 +272,6 @@
 		FF42A832229456F6008D23AE /* MainTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A831229456F6008D23AE /* MainTableDataSource.swift */; };
 		FF42A839229571EC008D23AE /* ICategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A838229571EB008D23AE /* ICategory.swift */; };
 		FF42A83B229571F7008D23AE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A83A229571F7008D23AE /* Category.swift */; };
-		FF42A8462295BECD008D23AE /* IServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A8452295BECD008D23AE /* IServiceCategory.swift */; };
-		FF42A8482295BEDC008D23AE /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A8472295BEDC008D23AE /* ServiceCategory.swift */; };
-		FF42A86122980EEE008D23AE /* MainFilterCategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A86022980EEE008D23AE /* MainFilterCategoriesDataSource.swift */; };
 		FFC4ECB1229835EF00396A0A /* UIImage+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC66229835EF00396A0A /* UIImage+AspectFit.swift */; };
 		FFC4ECB2229835EF00396A0A /* UIImageView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC67229835EF00396A0A /* UIImageView+Tools.swift */; };
 		FFC4ECB3229835EF00396A0A /* ImageSlideshowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC68229835EF00396A0A /* ImageSlideshowItem.swift */; };
@@ -336,6 +333,14 @@
 		FFC4ED0F2298543C00396A0A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED0E2298543C00396A0A /* Post.swift */; };
 		FFC4ED112298580100396A0A /* ShowCasePostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC4ED102298580100396A0A /* ShowCasePostView.xib */; };
 		FFC4ED132298587F00396A0A /* PostCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC4ED122298587F00396A0A /* PostCollectionCell.xib */; };
+		FFC4ED18229859FB00396A0A /* IServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED15229859FA00396A0A /* IServiceCategory.swift */; };
+		FFC4ED19229859FB00396A0A /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED16229859FA00396A0A /* ServiceCategory.swift */; };
+		FFC4ED1B22985AC900396A0A /* FilterCategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED1A22985AC800396A0A /* FilterCategoriesDataSource.swift */; };
+		FFC4ED1D229EC5E900396A0A /* ShowCasePostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED1C229EC5E900396A0A /* ShowCasePostsDataSource.swift */; };
+		FFC4ED20229EC74100396A0A /* IDesignFilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED1F229EC74100396A0A /* IDesignFilterCategory.swift */; };
+		FFC4ED22229EC8BC00396A0A /* DefaultDesignFilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED21229EC8BC00396A0A /* DefaultDesignFilterCategory.swift */; };
+		FFC4ED25229EC9B400396A0A /* IDesignShowCasePosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED24229EC9B400396A0A /* IDesignShowCasePosts.swift */; };
+		FFC4ED27229EC9C300396A0A /* DefaultDesignShowCasePosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED26229EC9C300396A0A /* DefaultDesignShowCasePosts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -644,9 +649,6 @@
 		FF42A831229456F6008D23AE /* MainTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableDataSource.swift; sourceTree = "<group>"; };
 		FF42A838229571EB008D23AE /* ICategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICategory.swift; sourceTree = "<group>"; };
 		FF42A83A229571F7008D23AE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		FF42A8452295BECD008D23AE /* IServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceCategory.swift; sourceTree = "<group>"; };
-		FF42A8472295BEDC008D23AE /* ServiceCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
-		FF42A86022980EEE008D23AE /* MainFilterCategoriesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFilterCategoriesDataSource.swift; sourceTree = "<group>"; };
 		FFC4EC66229835EF00396A0A /* UIImage+AspectFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AspectFit.swift"; sourceTree = "<group>"; };
 		FFC4EC67229835EF00396A0A /* UIImageView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tools.swift"; sourceTree = "<group>"; };
 		FFC4EC68229835EF00396A0A /* ImageSlideshowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlideshowItem.swift; sourceTree = "<group>"; };
@@ -709,6 +711,14 @@
 		FFC4ED0E2298543C00396A0A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FFC4ED102298580100396A0A /* ShowCasePostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowCasePostView.xib; sourceTree = "<group>"; };
 		FFC4ED122298587F00396A0A /* PostCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionCell.xib; sourceTree = "<group>"; };
+		FFC4ED15229859FA00396A0A /* IServiceCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IServiceCategory.swift; sourceTree = "<group>"; };
+		FFC4ED16229859FA00396A0A /* ServiceCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
+		FFC4ED1A22985AC800396A0A /* FilterCategoriesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCategoriesDataSource.swift; sourceTree = "<group>"; };
+		FFC4ED1C229EC5E900396A0A /* ShowCasePostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCasePostsDataSource.swift; sourceTree = "<group>"; };
+		FFC4ED1F229EC74100396A0A /* IDesignFilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDesignFilterCategory.swift; sourceTree = "<group>"; };
+		FFC4ED21229EC8BC00396A0A /* DefaultDesignFilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDesignFilterCategory.swift; sourceTree = "<group>"; };
+		FFC4ED24229EC9B400396A0A /* IDesignShowCasePosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDesignShowCasePosts.swift; sourceTree = "<group>"; };
+		FFC4ED26229EC9C300396A0A /* DefaultDesignShowCasePosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDesignShowCasePosts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2150,7 +2160,6 @@
 			isa = PBXGroup;
 			children = (
 				FF42A831229456F6008D23AE /* MainTableDataSource.swift */,
-				FF42A86022980EEE008D23AE /* MainFilterCategoriesDataSource.swift */,
 			);
 			path = dataSource;
 			sourceTree = "<group>";
@@ -2167,8 +2176,8 @@
 		FF42A8442295BE6B008D23AE /* services */ = {
 			isa = PBXGroup;
 			children = (
-				FF42A8452295BECD008D23AE /* IServiceCategory.swift */,
-				FF42A8472295BEDC008D23AE /* ServiceCategory.swift */,
+				FFC4ED14229859FA00396A0A /* categories */,
+				FFC4ED17229859FA00396A0A /* recommendedPosts */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -2442,6 +2451,7 @@
 		FFC4ECF0229836E000396A0A /* categoryFilter */ = {
 			isa = PBXGroup;
 			children = (
+				FFC4ED1E229EC72800396A0A /* design */,
 				FFC4ECF32298377000396A0A /* cells */,
 				FFC4ECF12298377000396A0A /* dataSource */,
 				FFC4ECF52298377000396A0A /* FilterCategoryView.swift */,
@@ -2454,6 +2464,7 @@
 		FFC4ECF12298377000396A0A /* dataSource */ = {
 			isa = PBXGroup;
 			children = (
+				FFC4ED1A22985AC800396A0A /* FilterCategoriesDataSource.swift */,
 				FFC4ECFB22983B3800396A0A /* IFilterCategoryDataSource.swift */,
 			);
 			path = dataSource;
@@ -2470,6 +2481,7 @@
 		FFC4ED0222984FDF00396A0A /* showcasePosts */ = {
 			isa = PBXGroup;
 			children = (
+				FFC4ED23229EC99C00396A0A /* design */,
 				FFC4ED0B2298542900396A0A /* models */,
 				FFC4ED0322984FDF00396A0A /* dataSource */,
 				FFC4ED0422984FDF00396A0A /* cells */,
@@ -2484,6 +2496,7 @@
 			isa = PBXGroup;
 			children = (
 				FFC4ED092298518E00396A0A /* IShowCasePostsDataSource.swift */,
+				FFC4ED1C229EC5E900396A0A /* ShowCasePostsDataSource.swift */,
 			);
 			path = dataSource;
 			sourceTree = "<group>";
@@ -2503,6 +2516,40 @@
 				FFC4ED0E2298543C00396A0A /* Post.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		FFC4ED14229859FA00396A0A /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED15229859FA00396A0A /* IServiceCategory.swift */,
+				FFC4ED16229859FA00396A0A /* ServiceCategory.swift */,
+			);
+			path = categories;
+			sourceTree = "<group>";
+		};
+		FFC4ED17229859FA00396A0A /* recommendedPosts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = recommendedPosts;
+			sourceTree = "<group>";
+		};
+		FFC4ED1E229EC72800396A0A /* design */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED1F229EC74100396A0A /* IDesignFilterCategory.swift */,
+				FFC4ED21229EC8BC00396A0A /* DefaultDesignFilterCategory.swift */,
+			);
+			path = design;
+			sourceTree = "<group>";
+		};
+		FFC4ED23229EC99C00396A0A /* design */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED24229EC9B400396A0A /* IDesignShowCasePosts.swift */,
+				FFC4ED26229EC9C300396A0A /* DefaultDesignShowCasePosts.swift */,
+			);
+			path = design;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2848,11 +2895,12 @@
 				FF104A8B229424B400C414F8 /* INetwork.swift in Sources */,
 				FF104AB0229424B400C414F8 /* String+Subscript.swift in Sources */,
 				FF104AA7229424B400C414F8 /* Image+Color.swift in Sources */,
+				FFC4ED20229EC74100396A0A /* IDesignFilterCategory.swift in Sources */,
 				FF104AF9229424B400C414F8 /* ILoginDirector.swift in Sources */,
 				FF104AEB229424B400C414F8 /* ConfirmationDesign.swift in Sources */,
 				FFC4ECE3229835EF00396A0A /* PopMenuPresentAnimationController.swift in Sources */,
+				FFC4ED18229859FB00396A0A /* IServiceCategory.swift in Sources */,
 				FF104A91229424B400C414F8 /* IDependenceDirector.swift in Sources */,
-				FF42A86122980EEE008D23AE /* MainFilterCategoriesDataSource.swift in Sources */,
 				FFC4ED0A2298518E00396A0A /* IShowCasePostsDataSource.swift in Sources */,
 				FFC4ED0622984FDF00396A0A /* IShowCasePostsView.swift in Sources */,
 				FF104BD322942E4100C414F8 /* NVActivityIndicatorAnimationBallScale.swift in Sources */,
@@ -2877,6 +2925,7 @@
 				FF104A34229424B400C414F8 /* IWelcomeDirector.swift in Sources */,
 				FF104BF9229448EE00C414F8 /* IRouter.swift in Sources */,
 				FF104A31229424B400C414F8 /* IWelcomePagesDataSource.swift in Sources */,
+				FFC4ED1B22985AC900396A0A /* FilterCategoriesDataSource.swift in Sources */,
 				FF104AFC229424B400C414F8 /* ILoginCake.swift in Sources */,
 				FFC4ECEF2298368300396A0A /* GradientView.swift in Sources */,
 				FF104B01229424B400C414F8 /* IAuthCake.swift in Sources */,
@@ -2985,9 +3034,11 @@
 				FF104ACB229424B400C414F8 /* MoreCakeAssembly.swift in Sources */,
 				FF104A3F229424B400C414F8 /* WelcomeCake.swift in Sources */,
 				FF104BED22942E4100C414F8 /* RQShineLabel.m in Sources */,
+				FFC4ED19229859FB00396A0A /* ServiceCategory.swift in Sources */,
 				FF104A54229424B400C414F8 /* Localizator.swift in Sources */,
 				FF104A36229424B400C414F8 /* IAnimatorImage.swift in Sources */,
 				FF104A8F229424B400C414F8 /* BackgroundTimer.swift in Sources */,
+				FFC4ED22229EC8BC00396A0A /* DefaultDesignFilterCategory.swift in Sources */,
 				FFC4ECB3229835EF00396A0A /* ImageSlideshowItem.swift in Sources */,
 				FF104AA0229424B400C414F8 /* UIStoryboard+Type.swift in Sources */,
 				FFC4ECC7229835EF00396A0A /* ContainerTemplate.swift in Sources */,
@@ -3005,6 +3056,7 @@
 				FF104A50229424B400C414F8 /* ISecurityService.swift in Sources */,
 				FF104BC122942E4100C414F8 /* FSPagerViewLayoutAttributes.swift in Sources */,
 				FFC4ECC3229835EF00396A0A /* Limonade.swift in Sources */,
+				FFC4ED25229EC9B400396A0A /* IDesignShowCasePosts.swift in Sources */,
 				FFC4ECCE229835EF00396A0A /* PMHLoader.swift in Sources */,
 				FF104AC4229424B400C414F8 /* WindowStack.swift in Sources */,
 				FF104BE222942E4100C414F8 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
@@ -3037,6 +3089,7 @@
 				FF104BB322942E4100C414F8 /* UIView+AnimationKit.swift in Sources */,
 				FF104AC5229424B400C414F8 /* IAnimator.swift in Sources */,
 				FF104A3A229424B400C414F8 /* WelcomePage.swift in Sources */,
+				FFC4ED27229EC9C300396A0A /* DefaultDesignShowCasePosts.swift in Sources */,
 				FF104A99229424B400C414F8 /* IError.swift in Sources */,
 				FFC4ECB9229835EF00396A0A /* PageIndicator.swift in Sources */,
 				FF104B00229424B400C414F8 /* AuthCake.swift in Sources */,
@@ -3078,7 +3131,6 @@
 				FF104AF6229424B400C414F8 /* LoginDesign.swift in Sources */,
 				FF104BBB22942E4100C414F8 /* JHChainableAnimator.m in Sources */,
 				FFC4ECDF229835EF00396A0A /* UIColor+Contrast.swift in Sources */,
-				FF42A8482295BEDC008D23AE /* ServiceCategory.swift in Sources */,
 				FF104BC322942E4100C414F8 /* FSPageControl.swift in Sources */,
 				FF104A22229424B400C414F8 /* RootController.swift in Sources */,
 				FF104A45229424B400C414F8 /* DataBaseAssembly.swift in Sources */,
@@ -3094,7 +3146,7 @@
 				FF104AD8229424B400C414F8 /* AccountMoreCell.swift in Sources */,
 				FF104BB222942E4100C414F8 /* DKChainableAnimationKit.swift in Sources */,
 				FF104A9B229424B400C414F8 /* UICollectionViewCell+Reuse.swift in Sources */,
-				FF42A8462295BECD008D23AE /* IServiceCategory.swift in Sources */,
+				FFC4ED1D229EC5E900396A0A /* ShowCasePostsDataSource.swift in Sources */,
 				FF104AED229424B400C414F8 /* IConfirmationDirector.swift in Sources */,
 				FF104AE3229424B400C414F8 /* AuthCakeAssembly.swift in Sources */,
 				FF104A4A229424B400C414F8 /* IAppDesign.swift in Sources */,

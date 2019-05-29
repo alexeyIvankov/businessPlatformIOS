@@ -10,14 +10,13 @@ import Foundation
 import UIKit
 
 class FilterCategoryView : UITableViewCell, IFilterCategoryView, UICollectionViewDelegate{
-
+ 
     @IBOutlet var collectionView:AICollectionView!
     
     var delegate: IFilterCategoryDelegate?
     
     private var _dataSource: IFilterCategoryDataSource!
-    private var _sizeCell:CGSize = CGSize(width: 100, height: 100)
-    private var _minimumLineSpacing:CGFloat = 25
+    private var _design:IDesignFilterCategory?
     
     static func build()-> FilterCategoryView{
        
@@ -31,20 +30,16 @@ class FilterCategoryView : UITableViewCell, IFilterCategoryView, UICollectionVie
         configureLayoutIfFlowLayout()
     }
     
+    func set(design: IDesignFilterCategory) {
+        _design = design
+        configureLayoutIfFlowLayout()
+    }
+    
     func set(dataSource:IFilterCategoryDataSource){
         _dataSource = dataSource
         self.collectionView.dataSource = _dataSource
     }
     
-    func set(sizeCell: CGSize) {
-        _sizeCell = sizeCell
-        configureLayoutIfFlowLayout()
-    }
-    
-    func set(minSpacing: CGFloat) {
-        _minimumLineSpacing = minSpacing
-        configureLayoutIfFlowLayout()
-    }
     
     func reloadData(){
         self.collectionView.reloadData()
@@ -52,8 +47,16 @@ class FilterCategoryView : UITableViewCell, IFilterCategoryView, UICollectionVie
     
     private func configureLayoutIfFlowLayout(){
         if let collectionViewFlowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            collectionViewFlowLayout.estimatedItemSize = _sizeCell
-            collectionViewFlowLayout.minimumLineSpacing = _minimumLineSpacing
+            
+            if let design = self._design{
+                if let sizeCell = design.sizeCells(){
+                    collectionViewFlowLayout.estimatedItemSize = sizeCell
+                }
+                if let minSpacing = design.minSpacingBetweenCells(){
+                    collectionViewFlowLayout.minimumLineSpacing = minSpacing
+                }
+            }
+            
             collectionViewFlowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
             collectionViewFlowLayout.invalidateLayout()
             self.collectionView.layoutSubviews()

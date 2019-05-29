@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MainFilterCategoriesDataSource : NSObject, IFilterCategoryDataSource{
+class FilterCategoriesDataSource : NSObject, IFilterCategoryDataSource{
  
     private var categories: [ICategory] = []
     

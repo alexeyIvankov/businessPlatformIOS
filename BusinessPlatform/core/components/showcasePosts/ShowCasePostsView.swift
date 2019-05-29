@@ -16,8 +16,7 @@ class ShowCasePostsView : UITableViewCell, IShowCasePostsView, UICollectionViewD
     var delegate: IShowCasePostsViewDelegate?
     
     private var _dataSource: IShowCasePostsDataSource!
-    private var _sizeCell:CGSize = CGSize(width: 100, height: 100)
-    private var _minimumLineSpacing:CGFloat = 25
+    private var _design:IDesignShowCasePosts?
     
     static func build()-> ShowCasePostsView{
         
@@ -36,14 +35,8 @@ class ShowCasePostsView : UITableViewCell, IShowCasePostsView, UICollectionViewD
         self.collectionView.dataSource = _dataSource
     }
     
-    func set(sizeCell: CGSize) {
-        _sizeCell = sizeCell
-        configureLayoutIfFlowLayout()
-    }
-    
-    func set(minSpacing: CGFloat) {
-        _minimumLineSpacing = minSpacing
-        configureLayoutIfFlowLayout()
+    func set(design:IDesignShowCasePosts){
+        
     }
     
     func reloadData(){
@@ -52,9 +45,17 @@ class ShowCasePostsView : UITableViewCell, IShowCasePostsView, UICollectionViewD
     
     private func configureLayoutIfFlowLayout(){
         if let collectionViewFlowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            collectionViewFlowLayout.estimatedItemSize = _sizeCell
-            collectionViewFlowLayout.minimumLineSpacing = _minimumLineSpacing
-            collectionViewFlowLayout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+            
+            if let design = self._design{
+                if let sizeCell = design.sizeCells(){
+                    collectionViewFlowLayout.estimatedItemSize = sizeCell
+                }
+                if let minSpacing = design.minSpacingBetweenCells(){
+                    collectionViewFlowLayout.minimumLineSpacing = minSpacing
+                }
+            }
+            
+            collectionViewFlowLayout.scrollDirection = UICollectionView.ScrollDirection.vertical
             collectionViewFlowLayout.invalidateLayout()
             self.collectionView.layoutSubviews()
         }
