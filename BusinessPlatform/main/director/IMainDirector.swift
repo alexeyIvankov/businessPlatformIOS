@@ -9,5 +9,6 @@
 import Foundation
 
 protocol IMainDirector : AnyObject {
-    var serviceCategory:IServiceCategory { get }
+    
+    func loadCategories(completion:@escaping(IFilterCategoryDataSource)->())
 }

@@ -9,9 +9,14 @@
 import Foundation
 
 class MainDirector : IMainDirector {
-    var serviceCategory: IServiceCategory
     
-    required init(serviceCategory: IServiceCategory){
-        self.serviceCategory = serviceCategory
+    func loadCategories(completion: @escaping (IFilterCategoryDataSource) -> ()) {
+        
+        var categories:[ICategory] = []
+        
+        for i in 1...20{
+            categories.append(Category(name: "category \(i)"))
+        }
+        completion(FilterCategoriesDataSource(categories: categories))
     }
 }

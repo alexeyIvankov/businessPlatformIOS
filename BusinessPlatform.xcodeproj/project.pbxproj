@@ -270,8 +270,6 @@
 		FF104C3C22944C0700C414F8 /* MainCake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF104C2322944C0700C414F8 /* MainCake.swift */; };
 		FF104C3E22944D0200C414F8 /* MainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF104C3D22944D0200C414F8 /* MainSB.storyboard */; };
 		FF42A832229456F6008D23AE /* MainTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A831229456F6008D23AE /* MainTableDataSource.swift */; };
-		FF42A839229571EC008D23AE /* ICategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A838229571EB008D23AE /* ICategory.swift */; };
-		FF42A83B229571F7008D23AE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A83A229571F7008D23AE /* Category.swift */; };
 		FFC4ECB1229835EF00396A0A /* UIImage+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC66229835EF00396A0A /* UIImage+AspectFit.swift */; };
 		FFC4ECB2229835EF00396A0A /* UIImageView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC67229835EF00396A0A /* UIImageView+Tools.swift */; };
 		FFC4ECB3229835EF00396A0A /* ImageSlideshowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4EC68229835EF00396A0A /* ImageSlideshowItem.swift */; };
@@ -333,14 +331,16 @@
 		FFC4ED0F2298543C00396A0A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED0E2298543C00396A0A /* Post.swift */; };
 		FFC4ED112298580100396A0A /* ShowCasePostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC4ED102298580100396A0A /* ShowCasePostView.xib */; };
 		FFC4ED132298587F00396A0A /* PostCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC4ED122298587F00396A0A /* PostCollectionCell.xib */; };
-		FFC4ED18229859FB00396A0A /* IServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED15229859FA00396A0A /* IServiceCategory.swift */; };
-		FFC4ED19229859FB00396A0A /* ServiceCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED16229859FA00396A0A /* ServiceCategory.swift */; };
 		FFC4ED1B22985AC900396A0A /* FilterCategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED1A22985AC800396A0A /* FilterCategoriesDataSource.swift */; };
 		FFC4ED1D229EC5E900396A0A /* ShowCasePostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED1C229EC5E900396A0A /* ShowCasePostsDataSource.swift */; };
 		FFC4ED20229EC74100396A0A /* IDesignFilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED1F229EC74100396A0A /* IDesignFilterCategory.swift */; };
 		FFC4ED22229EC8BC00396A0A /* DefaultDesignFilterCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED21229EC8BC00396A0A /* DefaultDesignFilterCategory.swift */; };
 		FFC4ED25229EC9B400396A0A /* IDesignShowCasePosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED24229EC9B400396A0A /* IDesignShowCasePosts.swift */; };
 		FFC4ED27229EC9C300396A0A /* DefaultDesignShowCasePosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED26229EC9C300396A0A /* DefaultDesignShowCasePosts.swift */; };
+		FFC4ED2B22A02A1700396A0A /* ICategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED2922A02A1700396A0A /* ICategory.swift */; };
+		FFC4ED2C22A02A1700396A0A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED2A22A02A1700396A0A /* Category.swift */; };
+		FFC4ED2E22A02AB700396A0A /* IMainTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED2D22A02AB700396A0A /* IMainTableItem.swift */; };
+		FFC4ED3022A02AC100396A0A /* MainTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC4ED2F22A02AC100396A0A /* MainTableItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -647,8 +647,6 @@
 		FF104C2322944C0700C414F8 /* MainCake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCake.swift; sourceTree = "<group>"; };
 		FF104C3D22944D0200C414F8 /* MainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainSB.storyboard; sourceTree = "<group>"; };
 		FF42A831229456F6008D23AE /* MainTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableDataSource.swift; sourceTree = "<group>"; };
-		FF42A838229571EB008D23AE /* ICategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICategory.swift; sourceTree = "<group>"; };
-		FF42A83A229571F7008D23AE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FFC4EC66229835EF00396A0A /* UIImage+AspectFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AspectFit.swift"; sourceTree = "<group>"; };
 		FFC4EC67229835EF00396A0A /* UIImageView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tools.swift"; sourceTree = "<group>"; };
 		FFC4EC68229835EF00396A0A /* ImageSlideshowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlideshowItem.swift; sourceTree = "<group>"; };
@@ -711,14 +709,16 @@
 		FFC4ED0E2298543C00396A0A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FFC4ED102298580100396A0A /* ShowCasePostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowCasePostView.xib; sourceTree = "<group>"; };
 		FFC4ED122298587F00396A0A /* PostCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionCell.xib; sourceTree = "<group>"; };
-		FFC4ED15229859FA00396A0A /* IServiceCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IServiceCategory.swift; sourceTree = "<group>"; };
-		FFC4ED16229859FA00396A0A /* ServiceCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCategory.swift; sourceTree = "<group>"; };
 		FFC4ED1A22985AC800396A0A /* FilterCategoriesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCategoriesDataSource.swift; sourceTree = "<group>"; };
 		FFC4ED1C229EC5E900396A0A /* ShowCasePostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCasePostsDataSource.swift; sourceTree = "<group>"; };
 		FFC4ED1F229EC74100396A0A /* IDesignFilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDesignFilterCategory.swift; sourceTree = "<group>"; };
 		FFC4ED21229EC8BC00396A0A /* DefaultDesignFilterCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDesignFilterCategory.swift; sourceTree = "<group>"; };
 		FFC4ED24229EC9B400396A0A /* IDesignShowCasePosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDesignShowCasePosts.swift; sourceTree = "<group>"; };
 		FFC4ED26229EC9C300396A0A /* DefaultDesignShowCasePosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDesignShowCasePosts.swift; sourceTree = "<group>"; };
+		FFC4ED2922A02A1700396A0A /* ICategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICategory.swift; sourceTree = "<group>"; };
+		FFC4ED2A22A02A1700396A0A /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FFC4ED2D22A02AB700396A0A /* IMainTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMainTableItem.swift; sourceTree = "<group>"; };
+		FFC4ED2F22A02AC100396A0A /* MainTableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2167,8 +2167,8 @@
 		FF42A83722957095008D23AE /* models */ = {
 			isa = PBXGroup;
 			children = (
-				FF42A838229571EB008D23AE /* ICategory.swift */,
-				FF42A83A229571F7008D23AE /* Category.swift */,
+				FFC4ED2D22A02AB700396A0A /* IMainTableItem.swift */,
+				FFC4ED2F22A02AC100396A0A /* MainTableItem.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -2176,8 +2176,6 @@
 		FF42A8442295BE6B008D23AE /* services */ = {
 			isa = PBXGroup;
 			children = (
-				FFC4ED14229859FA00396A0A /* categories */,
-				FFC4ED17229859FA00396A0A /* recommendedPosts */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -2451,6 +2449,7 @@
 		FFC4ECF0229836E000396A0A /* categoryFilter */ = {
 			isa = PBXGroup;
 			children = (
+				FFC4ED2822A02A1700396A0A /* models */,
 				FFC4ED1E229EC72800396A0A /* design */,
 				FFC4ECF32298377000396A0A /* cells */,
 				FFC4ECF12298377000396A0A /* dataSource */,
@@ -2518,22 +2517,6 @@
 			path = models;
 			sourceTree = "<group>";
 		};
-		FFC4ED14229859FA00396A0A /* categories */ = {
-			isa = PBXGroup;
-			children = (
-				FFC4ED15229859FA00396A0A /* IServiceCategory.swift */,
-				FFC4ED16229859FA00396A0A /* ServiceCategory.swift */,
-			);
-			path = categories;
-			sourceTree = "<group>";
-		};
-		FFC4ED17229859FA00396A0A /* recommendedPosts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = recommendedPosts;
-			sourceTree = "<group>";
-		};
 		FFC4ED1E229EC72800396A0A /* design */ = {
 			isa = PBXGroup;
 			children = (
@@ -2550,6 +2533,15 @@
 				FFC4ED26229EC9C300396A0A /* DefaultDesignShowCasePosts.swift */,
 			);
 			path = design;
+			sourceTree = "<group>";
+		};
+		FFC4ED2822A02A1700396A0A /* models */ = {
+			isa = PBXGroup;
+			children = (
+				FFC4ED2922A02A1700396A0A /* ICategory.swift */,
+				FFC4ED2A22A02A1700396A0A /* Category.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2875,6 +2867,7 @@
 				FF104B06229424B400C414F8 /* ISessionService.swift in Sources */,
 				FF104ADC229424B400C414F8 /* IMoreCake.swift in Sources */,
 				FF104A52229424B400C414F8 /* ILocalize.swift in Sources */,
+				FFC4ED2B22A02A1700396A0A /* ICategory.swift in Sources */,
 				FF104C3922944C0700C414F8 /* IMainDesign.swift in Sources */,
 				FF104BAA22942E4100C414F8 /* DKChainableAnimationKit+Effects.swift in Sources */,
 				FF104BCE22942E4100C414F8 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
@@ -2899,7 +2892,6 @@
 				FF104AF9229424B400C414F8 /* ILoginDirector.swift in Sources */,
 				FF104AEB229424B400C414F8 /* ConfirmationDesign.swift in Sources */,
 				FFC4ECE3229835EF00396A0A /* PopMenuPresentAnimationController.swift in Sources */,
-				FFC4ED18229859FB00396A0A /* IServiceCategory.swift in Sources */,
 				FF104A91229424B400C414F8 /* IDependenceDirector.swift in Sources */,
 				FFC4ED0A2298518E00396A0A /* IShowCasePostsDataSource.swift in Sources */,
 				FFC4ED0622984FDF00396A0A /* IShowCasePostsView.swift in Sources */,
@@ -2976,7 +2968,6 @@
 				FF104BD622942E4100C414F8 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
 				FFC4ECB4229835EF00396A0A /* ActivityIndicator.swift in Sources */,
 				FF104AE0229424B400C414F8 /* IAuthDirector.swift in Sources */,
-				FF42A839229571EC008D23AE /* ICategory.swift in Sources */,
 				FF104AAB229424B400C414F8 /* UIView+Shadow.swift in Sources */,
 				FF104AAD229424B400C414F8 /* String+Remove.swift in Sources */,
 				FF104AC6229424B400C414F8 /* IViewWithDisplayAnimation.swift in Sources */,
@@ -2984,6 +2975,7 @@
 				FF104AB8229424B400C414F8 /* ILazyParametersManager.swift in Sources */,
 				FF104ABD229424B400C414F8 /* LoaderServiceAssembly.swift in Sources */,
 				FF104BD522942E4100C414F8 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
+				FFC4ED2C22A02A1700396A0A /* Category.swift in Sources */,
 				FF104A1E229424B400C414F8 /* IRootDirector.swift in Sources */,
 				FF104BBF22942E4100C414F8 /* FSPageViewTransformer.swift in Sources */,
 				FF104AB4229424B400C414F8 /* UIViewController+BarButtons.swift in Sources */,
@@ -3008,6 +3000,7 @@
 				FF104A96229424B400C414F8 /* ISettings.swift in Sources */,
 				FFC4ECD9229835EF00396A0A /* FadeTransition.swift in Sources */,
 				FFC4ECDD229835EF00396A0A /* PopMenuAppearance.swift in Sources */,
+				FFC4ED3022A02AC100396A0A /* MainTableItem.swift in Sources */,
 				FF104A26229424B400C414F8 /* IRootRouter.swift in Sources */,
 				FF104A9F229424B400C414F8 /* UIStoryboard+Load.swift in Sources */,
 				FF104A9A229424B400C414F8 /* TimeInterval+Date.swift in Sources */,
@@ -3034,7 +3027,6 @@
 				FF104ACB229424B400C414F8 /* MoreCakeAssembly.swift in Sources */,
 				FF104A3F229424B400C414F8 /* WelcomeCake.swift in Sources */,
 				FF104BED22942E4100C414F8 /* RQShineLabel.m in Sources */,
-				FFC4ED19229859FB00396A0A /* ServiceCategory.swift in Sources */,
 				FF104A54229424B400C414F8 /* Localizator.swift in Sources */,
 				FF104A36229424B400C414F8 /* IAnimatorImage.swift in Sources */,
 				FF104A8F229424B400C414F8 /* BackgroundTimer.swift in Sources */,
@@ -3050,7 +3042,6 @@
 				FF104C3A22944C0700C414F8 /* MainDesign.swift in Sources */,
 				FF104A49229424B400C414F8 /* DataBase.swift in Sources */,
 				FF104A97229424B400C414F8 /* Settings.swift in Sources */,
-				FF42A83B229571F7008D23AE /* Category.swift in Sources */,
 				FF104BE322942E4100C414F8 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				FF104BD222942E4100C414F8 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,
 				FF104A50229424B400C414F8 /* ISecurityService.swift in Sources */,
@@ -3130,6 +3121,7 @@
 				FFC4ECD2229835EF00396A0A /* CATransition+Closure.swift in Sources */,
 				FF104AF6229424B400C414F8 /* LoginDesign.swift in Sources */,
 				FF104BBB22942E4100C414F8 /* JHChainableAnimator.m in Sources */,
+				FFC4ED2E22A02AB700396A0A /* IMainTableItem.swift in Sources */,
 				FFC4ECDF229835EF00396A0A /* UIColor+Contrast.swift in Sources */,
 				FF104BC322942E4100C414F8 /* FSPageControl.swift in Sources */,
 				FF104A22229424B400C414F8 /* RootController.swift in Sources */,

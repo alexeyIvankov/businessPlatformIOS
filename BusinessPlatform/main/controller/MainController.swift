@@ -55,7 +55,7 @@ class MainController : UIViewController, IFilterCategoryDelegate{
     //MARK: - data source
     func loadAndConfigureCategories(){
         
-        self.cake.director.serviceCategory.loadMainCategories { (categoriesDataSource) in
+        self.cake.director.loadCategories { (categoriesDataSource) in
             self.filterCategoryView.set(dataSource: categoriesDataSource)
             self.filterCategoryView.set(design: DefaultDesignFilterCategory())
             self.filterCategoryView.reloadData()

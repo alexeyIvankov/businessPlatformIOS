@@ -20,9 +20,8 @@ public class MainCakeAssembly : AssemblyProviderImpl {
             let loaderService:ILoaderService = injector.tryInject()!
             
             let router = MainRouter(loaderService: loaderService)
-            let serviceCategory:IServiceCategory = ServiceCategory()
             
-            let director = MainDirector(serviceCategory: serviceCategory)
+            let director = MainDirector()
             
             let design = MainDesign(appDesign: appDesign)
             
