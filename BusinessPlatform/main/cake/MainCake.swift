@@ -12,14 +12,11 @@ class MainCake : IMainCake {
     
     var router: IMainRouter
     var director: IMainDirector
-    var design:IMainDesign
     
     required init(router:IMainRouter,
-                  director:IMainDirector,
-                  design:IMainDesign){
+                  director:IMainDirector){
         
         self.router = router
         self.director = director
-        self.design = design
     }
 }

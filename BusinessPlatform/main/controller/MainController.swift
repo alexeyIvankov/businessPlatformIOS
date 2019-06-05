@@ -11,30 +11,30 @@ import UIKit
 import WebKit
 import KeyboardHandler
 
-class MainController : UIViewController, IFilterCategoryDelegate{
+class MainController : UIViewController{
+    
+    //MARK: Dependence
+    var cake:IMainCake = Depednence.tryInject()!
   
     //MARK: Outlets
     @IBOutlet var tableView:UITableView!
     
-    lazy var filterCategoryView = { () -> FilterCategoryView in
-        let v = FilterCategoryView.build()
-        v.delegate = self
-        return v
-    }()
+    //MARK: DataSources
+    private var dataSourceMainTable:IMainTableDataSource!
     
-    //MARK: Dependence
-    var cake:IMainCake = Depednence.tryInject()!
-    
-    
+
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Главный"
         self.cake.router.setOwnwer(ownwer: self)
-        self.cake.design.apply(vc: self)
+        self.applyDesign()
         
-        self.configureTableViewAndComponents()
-        self.loadAndConfigureCategories()
+        
+        self.prepareDataMainTable(completion: {  [weak self] in
+            self?.tableView.reloadData()
+        })
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,26 +45,22 @@ class MainController : UIViewController, IFilterCategoryDelegate{
         super.viewWillDisappear(animated)
     }
     
-    //MARK: - config ui components
-    private func configureTableViewAndComponents(){
-        self.tableView.tableHeaderView = self.filterCategoryView
-        self.tableView.estimatedRowHeight = UIScreen.main.bounds.size.height
-        self.tableView.rowHeight = UITableView.automaticDimension
-    }
-    
     //MARK: - data source
-    func loadAndConfigureCategories(){
+    private func prepareDataMainTable(completion:@escaping ()->()){
         
-        self.cake.director.loadCategories { (categoriesDataSource) in
-            self.filterCategoryView.set(dataSource: categoriesDataSource)
-            self.filterCategoryView.set(design: DefaultDesignFilterCategory())
-            self.filterCategoryView.reloadData()
+        self.cake.director.buildMainTableDataSource { [weak self](dataSource) in
+            self?.dataSourceMainTable = dataSource
+            self?.tableView.dataSource = dataSource
+            self?.tableView.delegate = dataSource
+            completion()
         }
     }
     
-    //MARK:- IFilterCategoryDelegate
-    func didSelect(category: ICategory) {
-        print(category.name)
-    }
+  
+    
+//    //MARK:- IFilterCategoryDelegate
+//    func didSelect(category: ICategory) {
+//        print(category.name)
+//    }
 }
 

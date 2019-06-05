@@ -8,7 +8,23 @@
 
 import Foundation
 
+enum MainTableItemType{
+    case recommendedPosts
+    case categories
+    
+    func string() -> String {
+        
+        if self == .recommendedPosts{
+            return "recommendedPosts"
+        }
+        else if self == .categories{
+            return "categories"
+        }
+        fatalError()
+    }
+}
+
 protocol IMainDirector : AnyObject {
     
-    func loadCategories(completion:@escaping(IFilterCategoryDataSource)->())
+    func buildMainTableDataSource(completion:@escaping(IMainTableDataSource)->())
 }

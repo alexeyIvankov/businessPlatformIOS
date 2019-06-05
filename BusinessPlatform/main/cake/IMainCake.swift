@@ -12,5 +12,4 @@ protocol IMainCake : AnyObject {
     
     var router:IMainRouter { get }
     var director:IMainDirector { get }
-    var design:IMainDesign { get }
 }

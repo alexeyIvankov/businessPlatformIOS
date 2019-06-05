@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FilterCategoriesDataSource : NSObject, IFilterCategoryDataSource{
+class CategoriesDataSource : NSObject, ICategoriesDataSource{
  
     private var categories: [ICategory] = []
     
@@ -36,11 +36,17 @@ class FilterCategoriesDataSource : NSObject, IFilterCategoryDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let category:ICategory = self.categories[indexPath.row]
-        let cell:ICategoryCollectionCell = (collectionView as! AICollectionView).dequeueCellLoadNibIfNeed(type: CategoryCollectionCell.self, indexPath: indexPath) as! ICategoryCollectionCell
-        
+        let cell:ICategoriesCell = (collectionView as! AICollectionView).dequeueCellLoadNibIfNeed(type: CategoriesCell.self, indexPath: indexPath) as! ICategoriesCell
         
         cell.set(category: category)
         
-        return cell as! UICollectionViewCell
+        return cell
     }
+    
+//    //MARK: - UICollectionViewDelegate
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+//        let category = dataSource.getCategory(indexPath: indexPath)
+//        assert(category != nil)
+//        self.delegate?.didSelect(category: category!)
+//    }
 }

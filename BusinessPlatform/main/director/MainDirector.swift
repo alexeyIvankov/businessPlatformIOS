@@ -10,13 +10,24 @@ import Foundation
 
 class MainDirector : IMainDirector {
     
-    func loadCategories(completion: @escaping (IFilterCategoryDataSource) -> ()) {
+      func buildMainTableDataSource(completion:@escaping(IMainTableDataSource)->())
+      {
         
+        var posts:[IPost] = []
+        
+        for i in 1...20{
+            posts.append(Post(name: "post \(i)"))
+        }
+    
         var categories:[ICategory] = []
         
         for i in 1...20{
             categories.append(Category(name: "category \(i)"))
         }
-        completion(FilterCategoriesDataSource(categories: categories))
+        
+        completion( MainTableDataSource(items:
+            [MainTableItemType.categories, MainTableItemType.recommendedPosts],
+                                        recommendedPostsDataSource: RecomendedPostsDataSource(posts: posts),
+                                        categoriesDataSource: CategoriesDataSource(categories:categories)))
     }
 }

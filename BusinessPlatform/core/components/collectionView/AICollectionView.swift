@@ -30,4 +30,14 @@ class AICollectionView : UICollectionView{
         return cell
     }
     
+    public func reloadData(completion:@escaping()->()){
+    
+        CATransaction.begin()
+        self.reloadData()
+        
+        CATransaction.setCompletionBlock {
+            completion()
+        }
+        CATransaction.commit()
+    }
 }
