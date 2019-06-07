@@ -16,6 +16,7 @@ class CategoriesController : UIViewController, ICategoriesController, UICollecti
     private var collectionView:AICollectionView!
     private var layout:UICollectionViewLayout!
     private var cellType:UICollectionViewCell.Type!
+    private var isEnableScroll:Bool = true
     private var categories:[ICategory] = []
     
     
@@ -56,6 +57,7 @@ class CategoriesController : UIViewController, ICategoriesController, UICollecti
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.isScrollEnabled = self.isEnableScroll
         
         return collectionView
     }
@@ -73,6 +75,15 @@ class CategoriesController : UIViewController, ICategoriesController, UICollecti
         }
     }
     
+    func set(enableScroll:Bool){
+        self.isEnableScroll = enableScroll
+    }
+    
+    func contentSize() -> CGSize{
+        return self.collectionView.contentSize
+    }
+    
+    //MARK: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         return self.categories.count

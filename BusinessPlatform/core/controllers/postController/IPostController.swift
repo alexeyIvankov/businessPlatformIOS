@@ -22,4 +22,6 @@ public protocol IPostController{
     
     func set(posts:[IPost])
     func reloadData(completion: @escaping ()->())
+    
+    func contentSize() -> CGSize
 }

@@ -37,26 +37,42 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qj2-KP-x4m">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-w6-5xY">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
-                                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IMm-a4-rpo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-w6-5xY">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="ier-JJ-bz2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9O9-dX-Rbu">
+                                                <rect key="frame" x="0.0" y="150" width="375" height="0.0"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="ida-Gv-mZq"/>
+                                                </constraints>
+                                                <viewLayoutGuide key="safeArea" id="qps-bt-hXh"/>
+                                            </view>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="4sk-Qg-Dm4"/>
+                                            <constraint firstItem="KI8-w6-5xY" firstAttribute="centerX" secondItem="IMm-a4-rpo" secondAttribute="centerX" id="B6e-GY-iJD"/>
+                                            <constraint firstItem="9O9-dX-Rbu" firstAttribute="leading" secondItem="IMm-a4-rpo" secondAttribute="leading" id="BUG-jZ-Vla"/>
+                                            <constraint firstItem="KI8-w6-5xY" firstAttribute="top" secondItem="IMm-a4-rpo" secondAttribute="top" id="J4h-Hh-zdZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="KI8-w6-5xY" secondAttribute="trailing" id="Ow7-Cj-uNj"/>
+                                            <constraint firstAttribute="trailing" secondItem="9O9-dX-Rbu" secondAttribute="trailing" id="PUm-Vz-Zzt"/>
+                                            <constraint firstItem="KI8-w6-5xY" firstAttribute="leading" secondItem="IMm-a4-rpo" secondAttribute="leading" id="Rcl-h9-pwH"/>
+                                            <constraint firstAttribute="bottom" secondItem="9O9-dX-Rbu" secondAttribute="bottom" id="hRP-UD-mQE"/>
+                                            <constraint firstItem="9O9-dX-Rbu" firstAttribute="top" secondItem="KI8-w6-5xY" secondAttribute="bottom" constant="30" id="m1a-u3-VPW"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9O9-dX-Rbu">
-                                        <rect key="frame" x="0.0" y="140" width="375" height="463"/>
-                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <viewLayoutGuide key="safeArea" id="qps-bt-hXh"/>
-                                    </view>
+                                    </scrollView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="KI8-w6-5xY" secondAttribute="trailing" id="IMv-rA-onm"/>
-                                    <constraint firstItem="KI8-w6-5xY" firstAttribute="leading" secondItem="Qj2-KP-x4m" secondAttribute="leading" id="Ili-Py-sA1"/>
-                                    <constraint firstItem="9O9-dX-Rbu" firstAttribute="leading" secondItem="Qj2-KP-x4m" secondAttribute="leading" id="igw-sa-qwz"/>
-                                    <constraint firstAttribute="bottom" secondItem="9O9-dX-Rbu" secondAttribute="bottom" id="irv-Cs-hW3"/>
-                                    <constraint firstItem="KI8-w6-5xY" firstAttribute="top" secondItem="Qj2-KP-x4m" secondAttribute="top" id="r9f-5Z-UC3"/>
-                                    <constraint firstAttribute="trailing" secondItem="9O9-dX-Rbu" secondAttribute="trailing" id="zOR-Hh-e86"/>
+                                    <constraint firstItem="IMm-a4-rpo" firstAttribute="top" secondItem="Qj2-KP-x4m" secondAttribute="top" id="PSJ-u7-Qyp"/>
+                                    <constraint firstAttribute="bottom" secondItem="IMm-a4-rpo" secondAttribute="bottom" id="Z3e-tY-WDt"/>
+                                    <constraint firstAttribute="trailing" secondItem="IMm-a4-rpo" secondAttribute="trailing" id="rMa-4H-jtM"/>
+                                    <constraint firstItem="IMm-a4-rpo" firstAttribute="leading" secondItem="Qj2-KP-x4m" secondAttribute="leading" id="wmf-7r-bmC"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -71,6 +87,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="BUD-kJ-Yl5"/>
                     <connections>
+                        <outlet property="heightViewPostsConstraint" destination="ida-Gv-mZq" id="7dX-qU-jBb"/>
+                        <outlet property="stackView" destination="Qj2-KP-x4m" id="fz2-2g-1hg"/>
                         <outlet property="viewCategories" destination="KI8-w6-5xY" id="wCp-62-Rka"/>
                         <outlet property="viewPosts" destination="9O9-dX-Rbu" id="wK1-12-lZL"/>
                     </connections>

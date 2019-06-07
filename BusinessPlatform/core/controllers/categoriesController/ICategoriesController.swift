@@ -22,4 +22,8 @@ public protocol ICategoriesController{
     
     func set(categories:[ICategory])
     func reloadData(completion: @escaping ()->())
+    
+    func set(enableScroll:Bool)
+    
+    func contentSize() -> CGSize
 }

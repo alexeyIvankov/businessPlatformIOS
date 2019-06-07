@@ -16,6 +16,7 @@ class PostController : UIViewController,IPostController, UICollectionViewDataSou
     private var collectionView:AICollectionView!
     private var layout:UICollectionViewLayout!
     private var cellType:UICollectionViewCell.Type!
+    private var isEnableScroll:Bool = true
     private var posts:[IPost] = []
     
     
@@ -35,21 +36,21 @@ class PostController : UIViewController,IPostController, UICollectionViewDataSou
         self.view = self.collectionView
     }
     
+
+    
     private func buildAndConfigCollectionView()-> AICollectionView{
         
         let collectionView = AICollectionView(frame:UIScreen.main.bounds, collectionViewLayout: self.layout)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = true
         
-        collectionView.autoresizingMask = [UIView.AutoresizingMask.flexibleRightMargin,
-                                                UIView.AutoresizingMask.flexibleLeftMargin,
-                                                UIView.AutoresizingMask.flexibleTopMargin,
-                                                UIView.AutoresizingMask.flexibleBottomMargin,
+        collectionView.autoresizingMask = [
                                                 UIView.AutoresizingMask.flexibleWidth,
                                                 UIView.AutoresizingMask.flexibleHeight]
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.isScrollEnabled = self.isEnableScroll
         
         return collectionView
     }
@@ -67,6 +68,15 @@ class PostController : UIViewController,IPostController, UICollectionViewDataSou
         }
     }
     
+    func set(enableScroll:Bool){
+        self.isEnableScroll = enableScroll
+    }
+    
+    func contentSize() -> CGSize{
+        return self.collectionView.contentSize
+    }
+    
+    //MARK: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         return self.posts.count

@@ -19,6 +19,8 @@ class MainController : UIViewController{
     //MARK: Outlets
     @IBOutlet var viewCategories:UIView!
     @IBOutlet var viewPosts:UIView!
+    @IBOutlet var stackView:UIStackView!
+    @IBOutlet var heightViewPostsConstraint:NSLayoutConstraint!
     
     //MARK: Controllers
     @IBOutlet var categoriesController:CategoriesController!
@@ -53,6 +55,7 @@ class MainController : UIViewController{
         self.categoriesController.set(categories: categories)
         self.categoriesController.view.frame = self.viewCategories.bounds
         self.viewCategories.addSubview(self.categoriesController.view)
+        //self.categoriesController.set(enableScroll: false)
         self.categoriesController.reloadData {
             
         }
@@ -66,8 +69,10 @@ class MainController : UIViewController{
         self.postsController.set(posts: posts)
         self.postsController.view.frame = self.viewPosts.bounds
         self.viewPosts.addSubview(self.postsController.view)
+        self.postsController.set(enableScroll: false)
         self.postsController.reloadData {
-            
+            self.heightViewPostsConstraint.constant = self.postsController.contentSize().height
+          
         }
 
     }
