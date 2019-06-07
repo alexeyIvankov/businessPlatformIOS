@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-public protocol IRecomendedPostCell where Self:UICollectionViewCell{
+public protocol IRecomendedPostCell : IPostCell where Self:UICollectionViewCell{
     func set(post:IPost)
 }

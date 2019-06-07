@@ -10,4 +10,5 @@ import Foundation
 
 public protocol ICategory {
     var name:String { get }
+    var posts:[IPost] { get }
 }

@@ -17,10 +17,12 @@ class MainController : UIViewController{
     var cake:IMainCake = Depednence.tryInject()!
   
     //MARK: Outlets
-    @IBOutlet var tableView:UITableView!
+    @IBOutlet var viewCategories:UIView!
+    @IBOutlet var viewPosts:UIView!
     
-    //MARK: DataSources
-    private var dataSourceMainTable:IMainTableDataSource!
+    //MARK: Controllers
+    @IBOutlet var categoriesController:CategoriesController!
+    private var postsController:PostController!
     
 
     //MARK: Life cycle
@@ -30,10 +32,43 @@ class MainController : UIViewController{
         self.cake.router.setOwnwer(ownwer: self)
         self.applyDesign()
         
+        var posts:[IPost] = []
         
-        self.prepareDataMainTable(completion: {  [weak self] in
-            self?.tableView.reloadData()
-        })
+        for i in 1...20{
+            posts.append(Post(name: "post \(i)"))
+        }
+        
+        var categories:[ICategory] = []
+        
+        for i in 1...20{
+            categories.append(Category(name: "category \(i)"))
+        }
+        
+        let l = UICollectionViewFlowLayout()
+        l.scrollDirection = .horizontal
+        l.estimatedItemSize = CGSize(width: 100, height: 100)
+       // l.minimumInteritemSpacing = 30
+        
+        self.categoriesController = CategoriesController(layout: l, cellType: CategoriesCell.self)
+        self.categoriesController.set(categories: categories)
+        self.categoriesController.view.frame = self.viewCategories.bounds
+        self.viewCategories.addSubview(self.categoriesController.view)
+        self.categoriesController.reloadData {
+            
+        }
+        
+        let l2 = UICollectionViewFlowLayout()
+        l2.scrollDirection = .vertical
+        l2.estimatedItemSize = CGSize(width: 200, height: 300)
+        l2.minimumInteritemSpacing = 10
+        
+        self.postsController = PostController(layout: l2, cellType: RecomendedPostCell.self)
+        self.postsController.set(posts: posts)
+        self.postsController.view.frame = self.viewPosts.bounds
+        self.viewPosts.addSubview(self.postsController.view)
+        self.postsController.reloadData {
+            
+        }
 
     }
     
@@ -45,22 +80,6 @@ class MainController : UIViewController{
         super.viewWillDisappear(animated)
     }
     
-    //MARK: - data source
-    private func prepareDataMainTable(completion:@escaping ()->()){
-        
-        self.cake.director.buildMainTableDataSource { [weak self](dataSource) in
-            self?.dataSourceMainTable = dataSource
-            self?.tableView.dataSource = dataSource
-            self?.tableView.delegate = dataSource
-            completion()
-        }
-    }
-    
-  
-    
-//    //MARK:- IFilterCategoryDelegate
-//    func didSelect(category: ICategory) {
-//        print(category.name)
-//    }
+
 }
 

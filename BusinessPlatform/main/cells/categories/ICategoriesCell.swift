@@ -9,6 +9,6 @@
 import Foundation
 import UIKit
 
-public protocol ICategoriesCell where Self:UICollectionViewCell{
+public protocol ICategoriesCell  : ICategoryCell where Self:UICollectionViewCell{
     func set(category:ICategory)
 }
