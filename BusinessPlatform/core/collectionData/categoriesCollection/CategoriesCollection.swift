@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-class CategoriesController : UIViewController, ICategoriesController, UICollectionViewDataSource, UICollectionViewDelegate{
-
-    var delegate: ICategoriesControllerDelegate?
+class CategoriesCollection : UIViewController, ICategoriesCollection, UICollectionViewDataSource, UICollectionViewDelegate{
+  
+    var delegate: ICategoriesCollectionDelegate?
     
-    private var collectionView:AICollectionView!
+    private var collectionView:AICollectionView!{
+        get{
+            return self.view as? AICollectionView
+        }
+    }
     private var layout:UICollectionViewLayout!
     private var cellType:UICollectionViewCell.Type!
     private var isEnableScroll:Bool = true
@@ -32,8 +36,7 @@ class CategoriesController : UIViewController, ICategoriesController, UICollecti
     }
     
     override func loadView() {
-        self.collectionView = self.buildAndConfigCollectionView()
-        self.view = self.collectionView
+        self.view = self.buildAndConfigCollectionView()
     }
 
     
@@ -44,7 +47,7 @@ class CategoriesController : UIViewController, ICategoriesController, UICollecti
     
     private func buildAndConfigCollectionView()-> AICollectionView{
         
-        let collectionView = AICollectionView(frame:UIScreen.main.bounds, collectionViewLayout: self.layout)
+        let collectionView = AICollectionView(frame:CGRect.zero, collectionViewLayout: self.layout)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = true
 
@@ -64,10 +67,10 @@ class CategoriesController : UIViewController, ICategoriesController, UICollecti
     
     //MARK: - IPostController
     
-    func set(categories:[ICategory]) {
-        self.categories = categories
+    func set<T>(models: [T]) {
+        self.categories = models as! [ICategory]
     }
-    
+
     
     public func reloadData(completion: @escaping ()->()){
         self.collectionView.reloadData {

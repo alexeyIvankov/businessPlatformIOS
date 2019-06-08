@@ -9,11 +9,16 @@
 import Foundation
 import UIKit
 
-class PostController : UIViewController,IPostController, UICollectionViewDataSource, UICollectionViewDelegate{
+class PostCollection : UIViewController,IPostCollection, UICollectionViewDataSource, UICollectionViewDelegate{
+ 
+    var delegate: IPostCollectionDelegate?
     
-    var delegate: IPostControllerDelegate?
+    private var collectionView:AICollectionView!{
+        get{
+            return self.view as? AICollectionView
+        }
+    }
     
-    private var collectionView:AICollectionView!
     private var layout:UICollectionViewLayout!
     private var cellType:UICollectionViewCell.Type!
     private var isEnableScroll:Bool = true
@@ -32,12 +37,10 @@ class PostController : UIViewController,IPostController, UICollectionViewDataSou
     }
     
     override func loadView() {
-        self.collectionView = self.buildAndConfigCollectionView()
-        self.view = self.collectionView
+        self.view = self.buildAndConfigCollectionView()
     }
     
 
-    
     private func buildAndConfigCollectionView()-> AICollectionView{
         
         let collectionView = AICollectionView(frame:UIScreen.main.bounds, collectionViewLayout: self.layout)
@@ -57,10 +60,9 @@ class PostController : UIViewController,IPostController, UICollectionViewDataSou
     
     //MARK: - IPostController
     
-    func set(posts: [IPost]) {
-        self.posts = posts
+    func set<T>(models: [T]) {
+        self.posts = models as! [IPost]
     }
-
     
     public func reloadData(completion: @escaping ()->()){
         self.collectionView.reloadData {

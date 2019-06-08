@@ -15,16 +15,21 @@ class MainController : UIViewController{
     
     //MARK: Dependence
     var cake:IMainCake = Depednence.tryInject()!
-  
-    //MARK: Outlets
-    @IBOutlet var viewCategories:UIView!
-    @IBOutlet var viewPosts:UIView!
-    @IBOutlet var stackView:UIStackView!
-    @IBOutlet var heightViewPostsConstraint:NSLayoutConstraint!
     
-    //MARK: Controllers
-    @IBOutlet var categoriesController:CategoriesController!
-    private var postsController:PostController!
+    //MARK: Outlets
+    @IBOutlet var viewPostsViewer:UIView!
+  
+//    //MARK: Outlets
+//    @IBOutlet var viewCategories:UIView!
+//    @IBOutlet var viewPosts:UIView!
+//    @IBOutlet var stackView:UIStackView!
+//    @IBOutlet var heightViewPostsConstraint:NSLayoutConstraint!
+//
+//    //MARK: Controllers
+//    private var categoriesController:ICollectionData!
+//    private var postsController:ICollectionData!
+    
+    private var postsViewer:IPostsViewerInCategory!
     
 
     //MARK: Life cycle
@@ -46,34 +51,44 @@ class MainController : UIViewController{
             categories.append(Category(name: "category \(i)"))
         }
         
-        let l = UICollectionViewFlowLayout()
-        l.scrollDirection = .horizontal
-        l.estimatedItemSize = CGSize(width: 100, height: 100)
-       // l.minimumInteritemSpacing = 30
+        self.postsViewer = PostViewerInCategory(typeCellCategory: CategoriesCell.self, typeCellPost: RecomendedPostCell.self)
+        self.postsViewer.view.frame = self.viewPostsViewer.bounds
+        self.viewPostsViewer.addSubview(self.postsViewer.view)
+        self.viewPostsViewer.createConstraintsResize(view: self.postsViewer.view)
         
-        self.categoriesController = CategoriesController(layout: l, cellType: CategoriesCell.self)
-        self.categoriesController.set(categories: categories)
-        self.categoriesController.view.frame = self.viewCategories.bounds
-        self.viewCategories.addSubview(self.categoriesController.view)
-        //self.categoriesController.set(enableScroll: false)
-        self.categoriesController.reloadData {
+        self.postsViewer.set(categories: categories)
+        self.postsViewer.reloadData {
             
         }
         
-        let l2 = UICollectionViewFlowLayout()
-        l2.scrollDirection = .vertical
-        l2.estimatedItemSize = CGSize(width: 200, height: 300)
-        l2.minimumInteritemSpacing = 10
-        
-        self.postsController = PostController(layout: l2, cellType: RecomendedPostCell.self)
-        self.postsController.set(posts: posts)
-        self.postsController.view.frame = self.viewPosts.bounds
-        self.viewPosts.addSubview(self.postsController.view)
-        self.postsController.set(enableScroll: false)
-        self.postsController.reloadData {
-            self.heightViewPostsConstraint.constant = self.postsController.contentSize().height
-          
-        }
+//        let l = UICollectionViewFlowLayout()
+//        l.scrollDirection = .horizontal
+//        l.estimatedItemSize = CGSize(width: 100, height: 100)
+//       // l.minimumInteritemSpacing = 30
+//
+//        self.categoriesController = CategoriesCollection(layout: l, cellType: CategoriesCell.self)
+//        self.categoriesController.set(models: categories)
+//        self.categoriesController.view.frame = self.viewCategories.bounds
+//        self.viewCategories.addSubview(self.categoriesController.view)
+//        //self.categoriesController.set(enableScroll: false)
+//        self.categoriesController.reloadData {
+//
+//        }
+//
+//        let l2 = UICollectionViewFlowLayout()
+//        l2.scrollDirection = .vertical
+//        l2.estimatedItemSize = CGSize(width: 200, height: 300)
+//        l2.minimumInteritemSpacing = 10
+//
+//        self.postsController = PostCollection(layout: l2, cellType: RecomendedPostCell.self)
+//        self.postsController.set(models: posts)
+//        self.postsController.view.frame = self.viewPosts.bounds
+//        self.viewPosts.addSubview(self.postsController.view)
+//        self.postsController.set(enableScroll: false)
+//        self.postsController.reloadData {
+//            self.heightViewPostsConstraint.constant = self.postsController.contentSize().height
+//
+//        }
 
     }
     

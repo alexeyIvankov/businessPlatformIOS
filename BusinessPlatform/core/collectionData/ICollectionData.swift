@@ -1,27 +1,22 @@
 //
-//  IPostController.swift
+//  ICollectionData.swift
 //  BusinessPlatform
 //
-//  Created by Alexey Ivankov on 06/06/2019.
+//  Created by Alexey Ivankov on 08/06/2019.
 //  Copyright © 2019 personal. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-public protocol IPostControllerDelegate{
-    func didSelect(post:IPost)
-}
-
-public protocol IPostController{
+public protocol ICollectionData where Self:UIViewController{
     
     init(layout:UICollectionViewLayout,
          cellType:UICollectionViewCell.Type)
     
-    var delegate:IPostControllerDelegate? { get }
+    func set<T>(models:[T])
+    func set(enableScroll:Bool)
     
-    func set(posts:[IPost])
     func reloadData(completion: @escaping ()->())
-    
     func contentSize() -> CGSize
 }
