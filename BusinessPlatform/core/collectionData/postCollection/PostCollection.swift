@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 
 class PostCollection : UIViewController,IPostCollection, UICollectionViewDataSource, UICollectionViewDelegate{
- 
-    var delegate: IPostCollectionDelegate?
+
+    var delegate: ICollectionDataDelegate?
+    
     
     private var collectionView:AICollectionView!{
         get{
@@ -70,6 +71,14 @@ class PostCollection : UIViewController,IPostCollection, UICollectionViewDataSou
         }
     }
     
+    func clearData(completion: @escaping () -> ()) {
+        
+        self.posts.removeAll()
+        self.collectionView.reloadData {
+            completion()
+        }
+    }
+    
     func set(enableScroll:Bool){
         self.isEnableScroll = enableScroll
     }
@@ -96,7 +105,7 @@ class PostCollection : UIViewController,IPostCollection, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let post:IPost = self.posts[indexPath.row]
-        self.delegate?.didSelect(post: post)
+        self.delegate?.didSelect(item: post as AnyObject)
     }
 }
 

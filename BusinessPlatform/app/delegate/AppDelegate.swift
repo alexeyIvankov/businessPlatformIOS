@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, IAppDelegate {
     }
     
     //MARK:- Dependence
-    private let authCake:IAuthCake = Depednence.tryInject()!
+    private let authCake:IAuthCake = Dependence.tryInject()!
     
     //MARK: - UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

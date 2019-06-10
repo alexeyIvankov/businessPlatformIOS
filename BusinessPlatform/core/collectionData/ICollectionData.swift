@@ -9,14 +9,21 @@
 import Foundation
 import UIKit
 
+public protocol ICollectionDataDelegate{
+    func didSelect(item:AnyObject)
+}
+
 public protocol ICollectionData where Self:UIViewController{
     
     init(layout:UICollectionViewLayout,
          cellType:UICollectionViewCell.Type)
     
+    var delegate:ICollectionDataDelegate? { get set }
+    
     func set<T>(models:[T])
     func set(enableScroll:Bool)
     
     func reloadData(completion: @escaping ()->())
+    func clearData(completion: @escaping ()->())
     func contentSize() -> CGSize
 }

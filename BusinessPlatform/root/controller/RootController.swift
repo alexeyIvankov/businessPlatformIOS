@@ -20,14 +20,14 @@ class RootController: UITabBarController{
     }
     
     //MARK: Dependence
-    var rootCake:IRootCake = Depednence.tryInject()!
+    var rootCake:IRootCake = Dependence.tryInject()!
 
     //MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     
         self.rootCake.router.setOwnwer(ownwer: self)
-        self.rootCake.design.apply(vc: self)
+        self.applyDesign()
         self.showPMHLoaderIfAuth()
     }
     

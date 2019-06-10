@@ -17,10 +17,10 @@ public class MainCakeAssembly : AssemblyProviderImpl {
         return Assembly.init(buildType:IMainCake.self, memoryPolicy: MemoryPolicy.Strong, instanceScope: InstanceScope.Singleton, buildBlock: { (injector:I_Injector) -> AnyObject in
             
             let loaderService:ILoaderService = injector.tryInject()!
-        
             let router = MainRouter(loaderService: loaderService)
             
-            let director = MainDirector()
+            let postViewer:IPostsViewerInCategory = PostViewerInCategory()
+            let director = MainDirector(postsViewer: postViewer)
             
 
             let cake:IMainCake = MainCake(router: router,

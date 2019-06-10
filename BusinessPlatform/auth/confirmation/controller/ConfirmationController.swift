@@ -57,8 +57,8 @@ class ConfirmationController : UIViewController {
     public var codeRegion:String?
     
     //MARK: Dependence
-    var cake:IConfirmationCake = Depednence.tryInject()!
-    var authCake:IAuthCake = Depednence.tryInject()!
+    var cake:IConfirmationCake = Dependence.tryInject()!
+    var authCake:IAuthCake = Dependence.tryInject()!
     
 
     //MARK: Life cycle

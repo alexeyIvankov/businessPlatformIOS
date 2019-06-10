@@ -15,7 +15,7 @@ public class MyApplication{
     }
 }
 
-public class Depednence{
+public class Dependence{
     
     public class func tryInject<T>() -> T?{
         return MyApplication.application().dependenceDirector.tryInject()

@@ -12,13 +12,10 @@ class RootCake : IRootCake {
     
     var router: IRootRouter
     var director:IRootDirector
-    var design:IRootDesign
     
     required init(router:IRootRouter,
-                  serviceLayer:IRootDirector,
-                  design:IRootDesign) {
+                  serviceLayer:IRootDirector) {
         self.router = router
         self.director = serviceLayer
-        self.design = design
     }
 }

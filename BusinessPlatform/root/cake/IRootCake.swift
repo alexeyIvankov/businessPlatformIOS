@@ -13,5 +13,4 @@ protocol IRootCake : AnyObject {
     
     var router:IRootRouter { get }
     var director:IRootDirector { get }
-    var design:IRootDesign { get }
 }

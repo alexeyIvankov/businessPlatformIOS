@@ -9,11 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol ICategoriesCollectionDelegate{
-    func didSelect(category:ICategory)
-}
 
 public protocol ICategoriesCollection : ICollectionData{
         
-    var delegate:ICategoriesCollectionDelegate? { get }
 }

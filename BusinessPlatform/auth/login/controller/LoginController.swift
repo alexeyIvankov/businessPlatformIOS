@@ -38,8 +38,8 @@ class LoginController : UIViewController, WKNavigationDelegate{
     
     
     //MARK: Dependence
-    var cake:ILoginCake = Depednence.tryInject()!
-    var authCake:IAuthCake = Depednence.tryInject()!
+    var cake:ILoginCake = Dependence.tryInject()!
+    var authCake:IAuthCake = Dependence.tryInject()!
     
      //MARK:
     private var keyboardHandler:KeyboardHandler?

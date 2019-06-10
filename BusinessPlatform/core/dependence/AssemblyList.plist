@@ -26,5 +26,7 @@
 	<string>ServiceNewsAssembly</string>
 	<string>ServiceGroupsAssembly</string>
 	<string>MainCakeAssembly</string>
+	<string>NewsCakeAssembly</string>
+	<string>CatalogCakeAssembly</string>
 </array>
 </plist>

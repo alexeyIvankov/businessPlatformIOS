@@ -17,7 +17,7 @@ class MoreController : UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet var tableView:UITableView!
     
     //MARK: Dependence
-    var cake:IMoreCake = Depednence.tryInject()!
+    var cake:IMoreCake = Dependence.tryInject()!
     
     //MARK:
     private lazy var cells:[UITableViewCell] = createDataSource()

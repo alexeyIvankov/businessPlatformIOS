@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 class CategoriesCollection : UIViewController, ICategoriesCollection, UICollectionViewDataSource, UICollectionViewDelegate{
-  
-    var delegate: ICategoriesCollectionDelegate?
+    var delegate: ICollectionDataDelegate?
+    
     
     private var collectionView:AICollectionView!{
         get{
@@ -78,6 +78,14 @@ class CategoriesCollection : UIViewController, ICategoriesCollection, UICollecti
         }
     }
     
+    func clearData(completion: @escaping () -> ()) {
+        
+        self.categories.removeAll()
+        self.collectionView.reloadData {
+            completion()
+        }
+    }
+    
     func set(enableScroll:Bool){
         self.isEnableScroll = enableScroll
     }
@@ -104,6 +112,6 @@ class CategoriesCollection : UIViewController, ICategoriesCollection, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category:ICategory = self.categories[indexPath.row]
-        self.delegate?.didSelect(category:category)
+        self.delegate?.didSelect(item: category as AnyObject)
     }
 }

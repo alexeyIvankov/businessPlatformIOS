@@ -65,7 +65,7 @@ class WelcomeController : UIViewController, FSPagerViewDelegate, FSPagerViewData
     private var timerAutoChangePage:Timer?
     
     //MARK: Dependence
-    var welcomeCake:IWelcomeCake = Depednence.tryInject()!
+    var welcomeCake:IWelcomeCake = Dependence.tryInject()!
     
     //MARK: Life cycle
     override func viewDidLoad() {

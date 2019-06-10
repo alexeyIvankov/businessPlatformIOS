@@ -9,11 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol IPostCollectionDelegate{
-    func didSelect(post:IPost)
-}
 
 public protocol IPostCollection : ICollectionData{
- 
-    var delegate:IPostCollectionDelegate? { get }
+
 }

@@ -9,11 +9,21 @@
 import Foundation
 import UIKit
 
+public protocol IPostViewerConfigurator{
+        
+    func postsViewerTypeCells(postsViewer:IPostsViewerInCategory) -> (categoryCell:UICollectionViewCell.Type, postCell:UICollectionViewCell.Type)
+    
+    func postsViewerLayouts(postsViewer:IPostsViewerInCategory) -> (layoutCategory:UICollectionViewLayout, layoutPost:UICollectionViewLayout)
+}
+
 public protocol IPostsViewerInCategory where Self:UIViewController{
     
-    init(typeCellCategory:UICollectionViewCell.Type,
-         typeCellPost:UICollectionViewCell.Type)
+    func configure(configurator:IPostViewerConfigurator)
+    func present(view:UIView)
     
     func set(categories:[ICategory])
-    func reloadData(completion:@escaping ()->())
+    
+    func reloadCategories(completion:@escaping ()->())
+    func reloadPosts(completion:@escaping ()->())
+    func reloadAll(completion:@escaping ()->())
 }
