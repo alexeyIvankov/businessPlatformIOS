@@ -11,4 +11,6 @@ import UIKit
 
 public protocol ICatalogDirector{
     
+    func loadCategories(completion:@escaping ([ICategory])->())
+    func loadPosts(completion:@escaping ([IPost])->())
 }

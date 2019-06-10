@@ -11,7 +11,7 @@ import UIKit
 import WebKit
 import KeyboardHandler
 
-class MainController : UIViewController, IPostViewerConfigurator{
+class MainController : UIViewController{
    
     //MARK: Dependence
     var cake:IMainCake = Dependence.tryInject()!
@@ -25,8 +25,6 @@ class MainController : UIViewController, IPostViewerConfigurator{
         self.navigationItem.title = "Главный"
         self.cake.router.setOwnwer(ownwer: self)
         self.applyDesign()
-        self.configurePostViewer()
-        self.loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,39 +35,22 @@ class MainController : UIViewController, IPostViewerConfigurator{
         super.viewWillDisappear(animated)
     }
     
-    private func configurePostViewer(){
-        
-        self.cake.director.postsViewer.configure(configurator: self)
-        self.cake.director.postsViewer.view.frame = self.viewPostsViewer.bounds
-        self.viewPostsViewer.addSubview(self.cake.director.postsViewer.view)
-    }
+//    private func configurePostViewer(){
+//
+//        self.cake.director.postsViewer.configure(configurator: self)
+//        self.cake.director.postsViewer.view.frame = self.viewPostsViewer.bounds
+//        self.viewPostsViewer.addSubview(self.cake.director.postsViewer.view)
+//    }
+//
+//    private func loadData(){
+//
+//        self.cake.director.loadData { [weak self](categories) in
+//            self?.cake.director.postsViewer.set(categories: categories)
+//            self?.cake.director.postsViewer.reloadAll {
+//
+//            }
+//        }
+//    }
     
-    private func loadData(){
-        
-        self.cake.director.loadData { [weak self](categories) in
-            self?.cake.director.postsViewer.set(categories: categories)
-            self?.cake.director.postsViewer.reloadAll {
-                
-            }
-        }
-    }
-    
-    func postsViewerTypeCells(postsViewer: IPostsViewerInCategory) -> (categoryCell: UICollectionViewCell.Type, postCell: UICollectionViewCell.Type) {
-        return (CategoriesCell.self, RecomendedPostCell.self)
-    }
-    
-    func postsViewerLayouts(postsViewer: IPostsViewerInCategory) -> (layoutCategory: UICollectionViewLayout, layoutPost: UICollectionViewLayout) {
-        
-        let layoutCategory = UICollectionViewFlowLayout()
-        layoutCategory.scrollDirection = .horizontal
-        layoutCategory.estimatedItemSize = CGSize(width: 100, height: 100)
-        
-        let layoutPosts = UICollectionViewFlowLayout()
-        layoutPosts.scrollDirection = .vertical
-        layoutPosts.estimatedItemSize = CGSize(width: 100, height: 100)
-        
-        return (layoutCategory, layoutPosts)
-    }
-
 }
 

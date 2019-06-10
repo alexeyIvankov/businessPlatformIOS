@@ -8,7 +8,7 @@
 
 import Foundation
 
-class RecomendedPostCell : UICollectionViewCell, IRecomendedPostCell{
+class CatalogPostCell : UICollectionViewCell, ICatalogPostCell{
  
     @IBOutlet var labelPostName:UILabel!
     
@@ -18,5 +18,4 @@ class RecomendedPostCell : UICollectionViewCell, IRecomendedPostCell{
         self.post = post
         self.labelPostName.text = self.post.name
     }
-    
 }

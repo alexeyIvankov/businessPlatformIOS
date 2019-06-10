@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CategoriesCell : UICollectionViewCell, ICategoriesCell{
+class CatalogCategoriesCell : UICollectionViewCell, ICatalogCategoriesCell{
  
     @IBOutlet var labelCategoryName:UILabel!
     
