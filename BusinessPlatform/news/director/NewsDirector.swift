@@ -10,4 +10,16 @@ import Foundation
 
 class NewsDirector : INewsDirector {
     
+    func loadNews(completion:@escaping ([INews])->()){
+        
+        var newsContainer:[INews] = []
+        
+        for i in 0...50{
+            
+            let news:INews = News(title: "news \(i)", body: "body \(i)")
+            newsContainer.append(news)
+        }
+        
+        completion(newsContainer)
+    }
 }

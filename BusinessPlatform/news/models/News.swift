@@ -10,4 +10,11 @@ import Foundation
 
 class News : INews {
     
+    var title:String
+    var body:String
+    
+    required init(title:String, body:String){
+        self.title = title
+        self.body = body
+    }
 }

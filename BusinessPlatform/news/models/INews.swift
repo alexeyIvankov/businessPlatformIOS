@@ -11,4 +11,6 @@ import UIKit
 
 public protocol INews {
     
+    var title:String { get }
+    var body:String { get }
 }

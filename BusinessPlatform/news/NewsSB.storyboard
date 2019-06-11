@@ -33,10 +33,25 @@
                     <view key="view" contentMode="scaleToFill" id="Q7H-Pf-4jg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k7T-MR-s8e" customClass="AITableView" customModule="BusinessPlatform" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ogj-ok-3P9" firstAttribute="bottom" secondItem="k7T-MR-s8e" secondAttribute="bottom" id="3Qf-w7-sgF"/>
+                            <constraint firstItem="k7T-MR-s8e" firstAttribute="leading" secondItem="Ogj-ok-3P9" secondAttribute="leading" id="9fC-eB-LDX"/>
+                            <constraint firstItem="Ogj-ok-3P9" firstAttribute="trailing" secondItem="k7T-MR-s8e" secondAttribute="trailing" id="KbU-OT-ofp"/>
+                            <constraint firstItem="k7T-MR-s8e" firstAttribute="top" secondItem="Ogj-ok-3P9" secondAttribute="top" id="iuY-i9-RbZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ogj-ok-3P9"/>
                     </view>
                     <navigationItem key="navigationItem" id="diE-kX-JSz"/>
+                    <connections>
+                        <outlet property="tableViewNews" destination="k7T-MR-s8e" id="nkw-JS-JBi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VH9-64-oNt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

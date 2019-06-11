@@ -11,4 +11,5 @@ import UIKit
 
 public protocol INewsDirector{
     
+    func loadNews(completion:@escaping ([INews])->())
 }

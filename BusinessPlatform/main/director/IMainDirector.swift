@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 
 protocol IMainDirector : AnyObject {
-    
-    var postsViewer:IPostsViewerInCategory { get }
-    
+        
     func loadData(completion:@escaping([ICategory])->())
 }

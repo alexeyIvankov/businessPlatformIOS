@@ -9,13 +9,7 @@
 import Foundation
 
 class MainDirector : IMainDirector {
-    
-    var postsViewer:IPostsViewerInCategory
-    
-    required init(postsViewer:IPostsViewerInCategory ) {
-        self.postsViewer = postsViewer
-    }
-    
+        
     func loadData(completion:@escaping([ICategory])->()){
         
         var categories:[ICategory] = []
